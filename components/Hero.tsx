@@ -123,7 +123,7 @@ const Hero: React.FC = () => {
           <div className="absolute -inset-4 bg-gradient-to-tr from-primary/10 to-accent/10 rounded-[3rem] blur-2xl"></div>
           <div className="relative bg-white border border-slate-200 rounded-[2.5rem] p-5 shadow-2xl">
              <img 
-               src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&h=750&auto=format&fit=crop" 
+               src="/images/yashmaheshwari.png" 
                alt="Yash Maheshwari" 
                className="rounded-[1.8rem] w-full h-[500px] object-cover shadow-inner"
              />

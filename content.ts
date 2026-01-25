@@ -8,7 +8,7 @@ export const PERSONAL_INFO = {
   email: "yashmahe2018@gmail.com",
   linkedin: "https://www.linkedin.com/in/yashmaheshwari2009/",
   instagram: "https://www.instagram.com/yashhhh__m/",
-  resume: "#",
+  resume: "/resume/yash-maheshwari-resume-2025.pdf",
   bio: "Motivated high school student and researcher focusing on Small Language Models (SLMs) and AI agent orchestration. From launching 501(c)(3) non-profits to filing US patents and engineering AI testing suites at Stanford labs, I bridge technical innovation with systemic policy design."
 };
 
@@ -175,7 +175,7 @@ export const PROJECTS: Project[] = [
     description: "RAG-integrated chatbot site for district AI policy resources.",
     tags: ["Next.js", "RAG", "OpenAI"],
     link: "https://mvhs-tech.vercel.app/",
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop"
+    image: "/images/mvhs-tech-website.png"
   },
   {
     id: "policy-path",
@@ -183,7 +183,7 @@ export const PROJECTS: Project[] = [
     description: "Helps educators build custom AI boundaries based on demographics.",
     tags: ["GPT-4", "Education", "Vercel"],
     link: "https://google-innovator-project.vercel.app/",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop"
+    image: "/images/ai-policy-pathway.png"
   },
   {
     id: "automated-knowledge",

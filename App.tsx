@@ -7,6 +7,7 @@ import ExperienceTimeline from './components/ExperienceTimeline';
 import Speaking from './components/Speaking';
 import Research from './components/Research';
 import Projects from './components/Projects';
+import Resume from './components/Resume';
 import Skills from './components/Skills';
 import Awards from './components/Awards';
 import Footer from './components/Footer';
@@ -29,6 +30,7 @@ const App: React.FC = () => {
         <Speaking />
         <Research />
         <Projects />
+        <Resume />
         <Skills />
         <Awards />
       </main>
