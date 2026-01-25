@@ -16,7 +16,7 @@ export const STATS: StatChip[] = [
   { label: "US Patents", value: "2", icon: "FileText" },
   { label: "iOS Apps", value: "3", icon: "Smartphone" },
   { label: "National Stages", value: "8+", icon: "Mic2" },
-  { label: "Weighted GPA", value: "4.72", icon: "GraduationCap" }
+  { label: "Funding Raised", value: "$10k+", icon: "TrendingUp" }
 ];
 
 export const EXPERIENCES: Experience[] = [
@@ -212,45 +212,45 @@ export const PROJECTS: Project[] = [
 ];
 
 export const AWARDS: Award[] = [
-  { 
-    title: "Congressional App Award", 
-    issuer: "Anna Eshoo", 
-    date: "2024", 
+  {
+    title: "Congressional App Award",
+    issuer: "Anna Eshoo",
+    date: "2024",
     icon: "Award",
     description: "Recognized by the U.S. House of Representatives for creating a financial literacy tool."
   },
-  { 
-    title: "FRC Rookie All-Star SF Regional", 
-    issuer: "FIRST Robotics", 
-    date: "2024", 
+  {
+    title: "FRC Rookie All-Star SF Regional",
+    issuer: "FIRST Robotics",
+    date: "2024",
     icon: "Target",
     description: "Led software development for a first-year team that qualified for World Championships."
   },
-  { 
-    title: "Winner: MVHacks 2025", 
-    issuer: "MVHacks", 
-    date: "2025", 
+  {
+    title: "Winner: MVHacks 2025",
+    issuer: "MVHacks",
+    date: "2025",
     icon: "Code",
     description: "Won 1st Place overall for a novel wildfire prediction app using Llama 3.2 3B parameter model."
   },
-  { 
-    title: "2nd Place AI Hackathon", 
-    issuer: "Aisera Inc", 
-    date: "2025", 
+  {
+    title: "2nd Place AI Hackathon",
+    issuer: "Aisera Inc",
+    date: "2025",
     icon: "Code",
     description: "Built a functional MCP bridge and showcased it to industry leaders at Aisera."
   },
-  { 
-    title: "Most Popular Award", 
-    issuer: "Community Hackathon", 
-    date: "2024", 
+  {
+    title: "Most Popular Award",
+    issuer: "Community Hackathon",
+    date: "2024",
     icon: "Star",
     description: "Voted #1 most popular project by community members and attendees."
   },
-  { 
-    title: "Judges' Choice Award", 
-    issuer: "FTC Robotics", 
-    date: "2025", 
+  {
+    title: "Judges' Choice Award",
+    issuer: "FTC Robotics",
+    date: "2025",
     icon: "Star",
     description: "Special recognition awarded by the judging panel at the FTC Robotics competition."
   }

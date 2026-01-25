@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FileText, Smartphone, Mic2, GraduationCap } from 'lucide-react';
+import { FileText, Smartphone, Mic2, GraduationCap, TrendingUp } from 'lucide-react';
 import { PERSONAL_INFO, STATS } from '../content';
 
 const iconMap: Record<string, any> = {
@@ -9,6 +9,7 @@ const iconMap: Record<string, any> = {
   Smartphone: Smartphone,
   Mic2: Mic2,
   GraduationCap: GraduationCap,
+  TrendingUp: TrendingUp,
 };
 
 const About: React.FC = () => {
