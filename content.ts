@@ -199,7 +199,7 @@ export const PROJECTS: Project[] = [
     description: "Educational robotics/coding card game sold on Amazon & Kickstarter.",
     tags: ["Product", "Robotics", "E-commerce"],
     link: "#",
-    image: "https://images.unsplash.com/photo-1610819013583-670117b89972?q=80&w=800&auto=format&fit=crop"
+    image: "/images/battle-timz.png"
   },
   {
     id: "mcp-bridge",
@@ -207,7 +207,7 @@ export const PROJECTS: Project[] = [
     description: "Open-source bridge connecting enterprise platforms to any MCP server.",
     tags: ["Open Source", "MCP", "Orchestration"],
     link: "#",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=800&auto=format&fit=crop"
+    image: "/images/mcp-bridge.png"
   }
 ];
 
