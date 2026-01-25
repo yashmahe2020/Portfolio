@@ -11,18 +11,14 @@ import Resume from './components/Resume';
 import Skills from './components/Skills';
 import Awards from './components/Awards';
 import Footer from './components/Footer';
+import Background from './components/Background';
 
 const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-[#f8fafc] text-slate-900 selection:bg-primary/20 selection:text-primary antialiased">
-      {/* Subtle Light Gradient Overlay */}
-      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-0">
-         <div className="absolute top-[10%] right-[10%] w-[30%] h-[30%] bg-primary/5 blur-[120px] rounded-full"></div>
-         <div className="absolute bottom-[20%] left-[5%] w-[20%] h-[20%] bg-secondary/5 blur-[100px] rounded-full"></div>
-      </div>
-
+      <Background />
       <Navigation />
-      
+
       <main className="relative z-10">
         <Hero />
         <About />
@@ -34,7 +30,7 @@ const App: React.FC = () => {
         <Skills />
         <Awards />
       </main>
-      
+
       <Footer />
     </div>
   );

@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          <button 
+          <button
             onClick={scrollToTop}
             className="group flex flex-col items-center gap-4 p-8 bg-slate-50 rounded-[3rem] border border-slate-100 transition-all hover:bg-white hover:shadow-xl"
           >
@@ -43,8 +43,7 @@ const Footer: React.FC = () => {
         <div className="mt-24 pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400 font-bold uppercase tracking-widest">
           <p>© {new Date().getFullYear()} Yash Maheshwari</p>
           <div className="flex gap-10">
-            <span>Built with Intent</span>
-            <span className="hidden sm:inline">Mountain View High School • Stanford Lab</span>
+            <span>Mountain View High School • Stanford Lab</span>
           </div>
         </div>
       </div>

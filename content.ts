@@ -37,8 +37,8 @@ export const EXPERIENCES: Experience[] = [
     id: "mvhs-tech",
     company: "Mountain View High School",
     role: "Executive Board Member, Tech Internship",
-    period: "Sep 2024 - Present",
-    description: "Leading student-led AI innovation and raising $10k+ in funding.",
+    period: "May 2025 - Present",
+    description: "Leading student-led AI innovation and raising $25k+ in funding.",
     bullets: [
       "Featured in Washington Post for district AI policy co-design.",
       "Developed an AI Policy Pathway tool for educators.",
@@ -50,7 +50,7 @@ export const EXPERIENCES: Experience[] = [
     id: "stanford-kai",
     company: "Stanford Lab Research",
     role: "Research Engineer",
-    period: "Jun 2025 - Aug 2025",
+    period: "Jun 2025 - Present",
     description: "Developing 'Kai' for students with English comprehension challenges.",
     bullets: [
       "Reduced model latency by 60% via A/B testing prompts.",
@@ -66,7 +66,7 @@ export const SPEAKING_EVENTS: SpeakingEvent[] = [
     id: "fetc-2026",
     title: "FETC Conference: AI Ethics & Innovation",
     location: "Orlando, Florida",
-    date: "Jan 2026",
+    date: "2026",
     description: "Presenting on AI Ethics and student-led innovation programs for national educators.",
     tags: ["Conference", "Ethics", "Innovation"]
   },
@@ -74,7 +74,7 @@ export const SPEAKING_EVENTS: SpeakingEvent[] = [
     id: "asugsv-2025",
     title: "ASU+GSV Summit: Learners Light the Way",
     location: "San Diego, California",
-    date: "Apr 2025",
+    date: "2025",
     description: "Presented the student-co-design model and AI card games to global ed-tech leaders.",
     tags: ["Policy", "EdTech", "Co-Design"]
   },
@@ -82,7 +82,7 @@ export const SPEAKING_EVENTS: SpeakingEvent[] = [
     id: "google-2024",
     title: "Google HQ: AI & Education Panel",
     location: "Mountain View, CA",
-    date: "Dec 2024",
+    date: "2025",
     description: "Presented on a panel to Google engineers about AI design processes in classrooms.",
     tags: ["Industry", "Panel", "Design"]
   },
@@ -98,7 +98,7 @@ export const SPEAKING_EVENTS: SpeakingEvent[] = [
     id: "parent-night",
     title: "AI & Education Parent Night",
     location: "Mountain View High School",
-    date: "2024",
+    date: "2025",
     description: "Organized a panel with superintendents and educators for 60+ participants.",
     tags: ["Community", "Education", "Q&A"]
   },
@@ -133,7 +133,7 @@ export const RESEARCH_PROJECTS: ResearchItem[] = [
     id: "patent-mcp",
     title: "Hierarchical Aggregation Tree for MCP Selection",
     organization: "US Patent (Non-provisional)",
-    period: "Filed Oct 2025",
+    period: "Filed 2025",
     description: "A novel architecture for dynamic Model Context Protocol server selection.",
     type: 'patent',
     highlights: [
@@ -145,7 +145,7 @@ export const RESEARCH_PROJECTS: ResearchItem[] = [
     id: "patent-compliance",
     title: "Predictive Compliance for AI Agents",
     organization: "US Patent (Provisional)",
-    period: "Filed Oct 2025",
+    period: "Filed 2025",
     description: "Security monitoring system for preemptive agentic alignment detection.",
     type: 'patent',
     highlights: [
@@ -157,7 +157,7 @@ export const RESEARCH_PROJECTS: ResearchItem[] = [
     id: "slm-research",
     title: "Optimizing SLMs for Math Tutoring",
     organization: "Stanford Lab / JEI",
-    period: "2024 - 2025",
+    period: "2024 - 2026",
     description: "Research on maximizing SLM performance while minimizing resources.",
     type: 'lab',
     highlights: [
@@ -267,10 +267,10 @@ export const SKILL_GROUPS: SkillGroup[] = [
   },
   {
     category: "App Development",
-    skills: ["Swift", "SwiftUI", "Xcode", "CoreML", "Mobile UI/UX", "iOS SDK", "App Store Connect", "TestFlight"]
+    skills: ["Swift", "SwiftUI", "Xcode", "Mobile UI/UX", "iOS SDK", "App Store Connect"]
   },
   {
-    category: "Robotics & Hardware",
-    skills: ["Java", "C++", "Control Systems", "Electrical", "Hardware", "PID Loops", "Sensors"]
+    category: "Robotics & Mechanical",
+    skills: ["Java", "C++", "Electrical", "Mechanical"]
   }
 ];
