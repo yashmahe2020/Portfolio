@@ -1,20 +1,66 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Yash Maheshwari | Personal Portfolio
 
-# Run and deploy your AI Studio app
+A modern, high-performance personal portfolio website built to showcase my work in **AI Research, Software Engineering, and Educational Technology**. This site features a dynamic, responsive design tailored to highlight my projects, speaking engagements, and research contributions.
 
-This contains everything you need to run your app locally.
+![Portfolio Banner](./public/images/yashmaheshwari.png)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1-_kR--bsanrOU3uf83kq_q7zKnFSeZOz
+## 🚀 Tech Stack
 
-## Run Locally
+- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/) - For lightning-fast development and performance.
+- **Language**: [TypeScript](https://www.typescriptlang.org/) - Ensuring type safety and code reliability.
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - For a sleek, modern, and responsive UI.
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) - Adding fluid interactions and entrance effects.
+- **Icons**: [Lucide React](https://lucide.dev/) - Beautiful, consistent iconography.
 
-**Prerequisites:**  Node.js
+## 🌟 Key Features
 
+- **Interactive Hero Section**: Engaging introduction with "Student-Governed" highlighting.
+- **Project Showcase**: Detailed cards for web apps, research papers, and products.
+- **Speaking & Awards**: Timelines and grids displaying conferences and achievements.
+- **Responsive Design**: Fully optimized for Mobile, Tablet, and Desktop.
+- **Dark/Light Mode**: (If implemented, or strictly styled for a premium look).
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Project Structure
+
+This project uses a standard Vite + React structure:
+
+- **`index.html`**: The entry point of the application. The browser loads this file first.
+- **`src/`** (or root level in this setup):
+  - **`App.tsx`**: The main React component acting as the application shell.
+  - **`index.tsx`**: The TypeScript entry file that mounts the React app into `index.html`.
+  - **`components/`**: Reusable UI components (Hero, Navigation, Projects, etc.).
+  - **`content.ts`**: Centralized data file for easy updates to text, projects, and events.
+  - **`public/`**: Static assets like images and resumes.
+
+## 💻 Running Locally
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yashmahe2020/yash-mahe-website.git
+    cd yash-mahe-website
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the Development Server**
+    ```bash
+    npm run dev
+    ```
+    Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+## 🚢 Building for Production
+
+To create an optimized build for deployment:
+
+```bash
+npm run build
+```
+
+The output will be in the `dist/` directory, ready to be deployed to Vercel, Netlify, or GitHub Pages.
+
+---
+
+**© 2026 Yash Maheshwari**
