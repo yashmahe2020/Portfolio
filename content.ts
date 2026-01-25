@@ -15,8 +15,8 @@ export const PERSONAL_INFO = {
 export const STATS: StatChip[] = [
   { label: "US Patents", value: "2", icon: "FileText" },
   { label: "iOS Apps", value: "3", icon: "Smartphone" },
-  { label: "National Stages", value: "8+", icon: "Mic2" },
-  { label: "Funding Raised", value: "$10k+", icon: "TrendingUp" }
+  { label: "National Stages", value: "5+", icon: "Mic2" },
+  { label: "Funding Raised", value: "$25k+", icon: "TrendingUp" }
 ];
 
 export const EXPERIENCES: Experience[] = [
