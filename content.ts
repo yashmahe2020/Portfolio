@@ -242,17 +242,17 @@ export const AWARDS: Award[] = [
   },
   { 
     title: "Most Popular Award", 
-    issuer: "_______ Hackathon", 
+    issuer: "Community Hackathon", 
     date: "2024", 
     icon: "Star",
-    description: "Voted #1 most innovative and useful product by community members and judges."
+    description: "Voted #1 most popular project by community members and attendees."
   },
   { 
     title: "Judges' Choice Award", 
     issuer: "FTC Robotics", 
     date: "2025", 
     icon: "Star",
-    description: "Awarded for exceptional software architecture and mentoring in the FTC league."
+    description: "Special recognition awarded by the judging panel at the FTC Robotics competition."
   }
 ];
 
