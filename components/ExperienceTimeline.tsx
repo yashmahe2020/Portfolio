@@ -9,7 +9,7 @@ const ExperienceCard: React.FC<{ exp: Experience; idx: number }> = ({ exp, idx }
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div 
+    <div
       className="group relative h-[400px] w-full perspective-1000"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -26,16 +26,16 @@ const ExperienceCard: React.FC<{ exp: Experience; idx: number }> = ({ exp, idx }
             <div className="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center text-primary border border-slate-100 shadow-inner">
               <Briefcase size={20} />
             </div>
-            <div className="text-[9px] font-black text-slate-400 bg-slate-50 px-3 py-1 rounded-full uppercase tracking-tighter border border-slate-100">
+            <div className="text-xs font-black text-slate-400 bg-slate-50 px-3 py-1 rounded-full uppercase tracking-tighter border border-slate-100">
               {exp.period}
             </div>
           </div>
-          
+
           <div className="mb-4">
             <h3 className="text-xl font-display font-black text-slate-900 mb-1 leading-tight">{exp.role}</h3>
-            <p className="text-[10px] font-black text-primary uppercase tracking-[0.2em]">{exp.company}</p>
+            <p className="text-xs font-black text-primary uppercase tracking-[0.2em]">{exp.company}</p>
           </div>
-          
+
           <p className="text-slate-600 text-sm font-medium mb-4 leading-relaxed italic flex-1 line-clamp-4">
             {exp.description}
           </p>
@@ -43,13 +43,13 @@ const ExperienceCard: React.FC<{ exp: Experience; idx: number }> = ({ exp, idx }
           <div className="space-y-4">
             <div className="flex flex-wrap gap-1.5">
               {exp.tags.map((tag) => (
-                <span key={tag} className="text-[8px] font-black text-slate-400 px-2 py-0.5 bg-slate-50 rounded-md uppercase border border-slate-100 tracking-tighter">
+                <span key={tag} className="text-xs font-black text-slate-400 px-2 py-0.5 bg-slate-50 rounded-md uppercase border border-slate-100 tracking-tighter">
                   {tag}
                 </span>
               ))}
             </div>
-            <div className="flex items-center justify-center gap-1.5 text-[9px] font-black text-slate-300 uppercase tracking-widest border-t border-slate-50 pt-3">
-               Hover for Impact
+            <div className="flex items-center justify-center gap-1.5 text-xs font-black text-slate-300 uppercase tracking-widest border-t border-slate-50 pt-3">
+              Hover for Impact
             </div>
           </div>
         </div>
@@ -61,16 +61,16 @@ const ExperienceCard: React.FC<{ exp: Experience; idx: number }> = ({ exp, idx }
               <div className="w-8 h-8 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
                 <Info size={16} />
               </div>
-              <p className="text-[9px] font-black text-slate-400 uppercase tracking-[0.2em]">Impact & Results</p>
+              <p className="text-xs font-black text-slate-400 uppercase tracking-[0.2em]">Impact & Results</p>
             </div>
             <h4 className="text-lg font-display font-black text-slate-900 leading-tight border-b border-slate-200 pb-2">
               {exp.role}
             </h4>
           </div>
-          
+
           <ul className="space-y-2 flex-1 overflow-y-auto pr-2 custom-scrollbar w-full">
             {exp.bullets.map((bullet, i) => (
-              <li key={i} className="flex gap-3 text-xs text-slate-600 font-bold leading-snug">
+              <li key={i} className="flex gap-3 text-sm text-slate-600 font-bold leading-snug">
                 <CheckCircle2 size={14} className="text-primary shrink-0 mt-0.5" />
                 {bullet}
               </li>
@@ -78,9 +78,9 @@ const ExperienceCard: React.FC<{ exp: Experience; idx: number }> = ({ exp, idx }
           </ul>
 
           <div className="mt-4 pt-3 w-full text-center border-t border-slate-200">
-             <span className="text-[9px] font-black uppercase tracking-widest text-primary">
-               {exp.company} • {exp.period}
-             </span>
+            <span className="text-xs font-black uppercase tracking-widest text-primary">
+              {exp.company} • {exp.period}
+            </span>
           </div>
         </div>
       </motion.div>

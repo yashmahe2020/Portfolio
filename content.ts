@@ -15,7 +15,7 @@ export const PERSONAL_INFO = {
 export const STATS: StatChip[] = [
   { label: "US Patents", value: "2", icon: "FileText" },
   { label: "iOS Apps", value: "3", icon: "Smartphone" },
-  { label: "National Stages", value: "5+", icon: "Mic2" },
+  { label: "National Stages", value: "4+", icon: "Mic2" },
   { label: "Funding Raised", value: "$25k+", icon: "TrendingUp" }
 ];
 
@@ -89,7 +89,7 @@ export const SPEAKING_EVENTS: SpeakingEvent[] = [
   {
     id: "cal-mscs",
     title: "CAL-MSCS Day Statewide Educator",
-    location: "Mountain View High School",
+    location: "Mountain View, CA",
     date: "2025",
     description: "Led tours and presented to 80+ STEM teachers regarding engineering facility innovation.",
     tags: ["STEM", "Showcase", "Leadership"]

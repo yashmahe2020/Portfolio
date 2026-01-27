@@ -26,9 +26,9 @@ const App: React.FC = () => {
         <Speaking />
         <Research />
         <Projects />
+        <Awards />
         <Resume />
         <Skills />
-        <Awards />
       </main>
 
       <Footer />

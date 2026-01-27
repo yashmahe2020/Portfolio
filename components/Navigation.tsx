@@ -7,7 +7,7 @@ import { PERSONAL_INFO } from '../content';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
-  
+
   const backgroundColor = useTransform(
     scrollY,
     [0, 100],
@@ -20,8 +20,8 @@ const Navigation: React.FC = () => {
     { name: 'Speaking', href: '#speaking' },
     { name: 'Research', href: '#research' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Resume', href: '#resume' },
     { name: 'Awards', href: '#awards' },
+    { name: 'Resume', href: '#resume' },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
@@ -44,7 +44,7 @@ const Navigation: React.FC = () => {
       data-scrolled={scrollY.get() > 50}
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <a href="#" className="font-display font-black text-2xl tracking-tighter text-slate-900 group flex items-center gap-2" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
+        <a href="#" className="font-display font-black text-2xl tracking-tighter text-slate-900 group flex items-center gap-2" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
           <div className="w-8 h-8 rounded-lg bg-slate-900 group-hover:rotate-12 group-hover:bg-primary transition-all duration-500"></div>
           YM<span className="text-primary">.</span>
         </a>
@@ -62,7 +62,7 @@ const Navigation: React.FC = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-300"></span>
             </a>
           ))}
-          
+
           <div className="flex items-center gap-6 pl-8 border-l border-slate-200">
             <a href={PERSONAL_INFO.instagram} target="_blank" className="text-slate-400 hover:text-pink-600 transition-all hover:scale-110">
               <Instagram size={20} />

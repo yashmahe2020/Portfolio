@@ -14,7 +14,7 @@ const Skills: React.FC = () => {
             <div className="w-12 h-1 bg-primary rounded-full"></div>
           </div>
         </div>
-        
+
         <div className="flex-1 grid md:grid-cols-2 gap-10">
           {SKILL_GROUPS.map((group, idx) => (
             <motion.div
@@ -33,7 +33,7 @@ const Skills: React.FC = () => {
                   {group.category}
                 </h3>
               </div>
-              
+
               <div className="flex flex-wrap gap-2">
                 {group.skills.map((skill) => (
                   <motion.span
@@ -49,7 +49,18 @@ const Skills: React.FC = () => {
           ))}
         </div>
       </div>
-    </section>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        className="mt-16 p-10 rounded-[2.5rem] border border-slate-100 text-center bg-white/50 relative overflow-hidden group"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+        <p className="relative z-10 text-slate-400 text-lg font-medium italic">
+          Favorite Quote: "The best way to predict the future is to create it." — Peter Drucker
+        </p>
+      </motion.div>
+    </section >
   );
 };
 

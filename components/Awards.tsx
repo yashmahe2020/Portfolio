@@ -29,7 +29,7 @@ const AwardItem: React.FC<{ item: Award; idx: number }> = ({ item, idx }) => {
         <div className="w-14 h-14 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-400 group-hover:text-primary group-hover:bg-primary/5 border border-slate-100 transition-all">
           <Icon size={28} strokeWidth={1.5} />
         </div>
-        <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-50 border border-slate-100 text-[10px] font-black text-slate-400 uppercase tracking-tighter">
+        <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-slate-50 border border-slate-100 text-xs font-black text-slate-400 uppercase tracking-tighter">
           <Calendar size={10} />
           {item.date}
         </div>
@@ -38,7 +38,7 @@ const AwardItem: React.FC<{ item: Award; idx: number }> = ({ item, idx }) => {
       {/* Content Block */}
       <div className="flex-1 space-y-2">
         <div className="space-y-1">
-          <div className="text-[9px] font-black text-primary uppercase tracking-[0.2em]">
+          <div className="text-xs font-black text-primary uppercase tracking-[0.2em]">
             {item.issuer}
           </div>
           <h3 className="text-xl font-display font-black text-slate-900 leading-tight">
@@ -46,7 +46,7 @@ const AwardItem: React.FC<{ item: Award; idx: number }> = ({ item, idx }) => {
           </h3>
         </div>
 
-        <p className="text-xs text-slate-500 font-bold leading-relaxed pr-4">
+        <p className="text-sm text-slate-500 font-bold leading-relaxed pr-4">
           {item.description}
         </p>
       </div>
@@ -83,16 +83,7 @@ const Awards: React.FC = () => {
         ))}
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="mt-16 p-10 rounded-[2.5rem] border border-slate-100 text-center bg-white/50 relative overflow-hidden group"
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-        <p className="relative z-10 text-slate-400 text-lg font-medium italic">
-          Favorite Quote: "The best way to predict the future is to create it." — Peter Drucker
-        </p>
-      </motion.div>
+
     </section>
   );
 };
