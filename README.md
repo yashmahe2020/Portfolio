@@ -1,66 +1,48 @@
-# Yash Maheshwari | Personal Portfolio
+# Yash Maheshwari - Portfolio
 
-A modern, high-performance personal portfolio website built to showcase my work in **AI Research, Software Engineering, and Educational Technology**. This site features a dynamic, responsive design tailored to highlight my projects, speaking engagements, and research contributions.
+Welcome to my personal portfolio. This repository houses the source code for my personal website, showcasing my projects, research, and journey as a software engineer.
 
-![Portfolio Banner](./public/images/yashmaheshwari.png)
+## 🚀 About This Project
 
-## 🚀 Tech Stack
+I built this site to be a central hub for my work. It's designed to be clean, fast, and responsive, providing a clear overview of my technical skills and professional experience.
 
-- **Framework**: [React](https://react.dev/) + [Vite](https://vitejs.dev/) - For lightning-fast development and performance.
-- **Language**: [TypeScript](https://www.typescriptlang.org/) - Ensuring type safety and code reliability.
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) - For a sleek, modern, and responsive UI.
-- **Animations**: [Framer Motion](https://www.framer.com/motion/) - Adding fluid interactions and entrance effects.
-- **Icons**: [Lucide React](https://lucide.dev/) - Beautiful, consistent iconography.
+The site features:
+- **Project Showcase**: A curated list of my key technical projects.
+- **Experience Timeline**: A history of my internships and roles.
+- **Research**: Highlights of my work in AI and software development.
 
-## 🌟 Key Features
+## 🛠️ Built With
 
-- **Interactive Hero Section**: Engaging introduction with "Student-Governed" highlighting.
-- **Project Showcase**: Detailed cards for web apps, research papers, and products.
-- **Speaking & Awards**: Timelines and grids displaying conferences and achievements.
-- **Responsive Design**: Fully optimized for Mobile, Tablet, and Desktop.
-- **Dark/Light Mode**: (If implemented, or strictly styled for a premium look).
-
-## 🛠️ Project Structure
-
-This project uses a standard Vite + React structure:
-
-- **`index.html`**: The entry point of the application. The browser loads this file first.
-- **`src/`** (or root level in this setup):
-  - **`App.tsx`**: The main React component acting as the application shell.
-  - **`index.tsx`**: The TypeScript entry file that mounts the React app into `index.html`.
-  - **`components/`**: Reusable UI components (Hero, Navigation, Projects, etc.).
-  - **`content.ts`**: Centralized data file for easy updates to text, projects, and events.
-  - **`public/`**: Static assets like images and resumes.
+- **React & TypeScript**: For a robust and type-safe frontend.
+- **Vite**: Ensuring lightning-fast build times and development.
+- **Tailwind CSS**: For a modern, responsive design system.
+- **Framer Motion**: Adding smooth, natural animations.
 
 ## 💻 Running Locally
 
+To run this project on your local machine:
+
 1.  **Clone the repository**
     ```bash
-    git clone https://github.com/yashmahe2020/yash-mahe-website.git
-    cd yash-mahe-website
+    git clone https://github.com/yashmahe2020/Portfolio.git
+    cd Portfolio
     ```
 
-2.  **Install Dependencies**
+2.  **Install dependencies**
     ```bash
     npm install
     ```
 
-3.  **Start the Development Server**
+3.  **Start the development server**
     ```bash
     npm run dev
     ```
     Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
 
-## 🚢 Building for Production
+## 🚢 Deployment
 
-To create an optimized build for deployment:
-
-```bash
-npm run build
-```
-
-The output will be in the `dist/` directory, ready to be deployed to Vercel, Netlify, or GitHub Pages.
+This project is optimized for deployment on platforms like Vercel or Netlify. The build command `npm run build` generates a production-ready `dist` folder.
 
 ---
 
-**© 2026 Yash Maheshwari**
+© 2026 Yash Maheshwari. All rights reserved.
