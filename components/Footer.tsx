@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowUp, Mail, Linkedin, Instagram } from 'lucide-react';
+import { ArrowUp, Mail, Linkedin, Instagram, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../content';
 
 const Footer: React.FC = () => {
@@ -25,6 +25,9 @@ const Footer: React.FC = () => {
               </a>
               <a href={PERSONAL_INFO.instagram} target="_blank" className="p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-pink-500 text-slate-900 hover:text-pink-500 transition-all">
                 <Instagram size={22} />
+              </a>
+              <a href={PERSONAL_INFO.github} target="_blank" className="p-4 rounded-2xl bg-slate-50 border border-slate-200 hover:border-slate-900 text-slate-900 hover:text-slate-900 transition-all">
+                <Github size={22} />
               </a>
             </div>
           </div>

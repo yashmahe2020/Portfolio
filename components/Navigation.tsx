@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Menu, X, Instagram, Linkedin } from 'lucide-react';
+import { Menu, X, Instagram, Linkedin, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../content';
 
 const Navigation: React.FC = () => {
@@ -70,6 +70,9 @@ const Navigation: React.FC = () => {
             <a href={PERSONAL_INFO.linkedin} target="_blank" className="text-slate-400 hover:text-blue-600 transition-all hover:scale-110">
               <Linkedin size={20} />
             </a>
+            <a href={PERSONAL_INFO.github} target="_blank" className="text-slate-400 hover:text-slate-900 transition-all hover:scale-110">
+              <Github size={20} />
+            </a>
           </div>
         </div>
 
@@ -101,6 +104,7 @@ const Navigation: React.FC = () => {
           <div className="flex gap-8 mt-4 pt-10 border-t border-slate-100">
             <a href={PERSONAL_INFO.instagram} className="text-slate-900 flex items-center gap-2 font-bold uppercase text-xs tracking-widest"><Instagram size={24} /> Instagram</a>
             <a href={PERSONAL_INFO.linkedin} className="text-slate-900 flex items-center gap-2 font-bold uppercase text-xs tracking-widest"><Linkedin size={24} /> LinkedIn</a>
+            <a href={PERSONAL_INFO.github} className="text-slate-900 flex items-center gap-2 font-bold uppercase text-xs tracking-widest"><Github size={24} /> GitHub</a>
           </div>
         </motion.div>
       )}
