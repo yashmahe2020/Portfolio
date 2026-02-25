@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin, ArrowRight, FileText } from 'lucide-react';
+import { Instagram, Linkedin, ArrowRight, Github } from 'lucide-react';
 import { PERSONAL_INFO } from '../content';
 
 const Hero: React.FC = () => {
@@ -107,8 +107,8 @@ const Hero: React.FC = () => {
               <a href={PERSONAL_INFO.instagram} target="_blank" className="p-4 bg-white border border-slate-200 rounded-2xl hover:border-pink-500/50 hover:text-pink-500 transition-all shadow-sm">
                 <Instagram size={22} />
               </a>
-              <a href={PERSONAL_INFO.resume} target="_blank" className="p-4 bg-white border border-slate-200 rounded-2xl hover:border-primary/50 hover:text-primary transition-all shadow-sm">
-                <FileText size={22} />
+              <a href={PERSONAL_INFO.github} target="_blank" className="p-4 bg-white border border-slate-200 rounded-2xl hover:border-primary/50 hover:text-primary transition-all shadow-sm">
+                <Github size={22} />
               </a>
             </div>
           </div>

@@ -8,6 +8,7 @@ export const PERSONAL_INFO = {
   email: "yashmahe2018@gmail.com",
   linkedin: "https://www.linkedin.com/in/yashmaheshwari2009/",
   instagram: "https://www.instagram.com/yashhhh__m/",
+  github: "https://github.com/yashmahe2020",
   resume: "/resume/yash-maheshwari-resume-2025.pdf",
   bio: "Motivated high school student and researcher focusing on Small Language Models (SLMs) and AI agent orchestration. From launching 501(c)(3) non-profits to filing US patents and engineering AI testing suites at Stanford labs, I bridge technical innovation with systemic policy design."
 };
