@@ -1,24 +1,234 @@
-# Logs
-logs
-*.log
+# ============================================================
+# INDUSTRY-STANDARD .gitignore  —  Vite + React + TypeScript
+# ============================================================
+# Audit date: 2025-03
+# Stack: Vite, React, TypeScript, pnpm
+# ============================================================
+
+
+# ────────────────────────────────────────────────────────────
+# 1. OPERATING SYSTEM FILES
+# ────────────────────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+[Dd]esktop.ini
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+
+# ────────────────────────────────────────────────────────────
+# 2. NODE & PACKAGE MANAGERS
+# ────────────────────────────────────────────────────────────
+node_modules/
+jspm_packages/
+
+# npm
+.npm/
 npm-debug.log*
+
+# yarn
+.yarn/
+.yarn-integrity
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.yarnrc.yml
 
-node_modules
-dist
-dist-ssr
+# pnpm  (lock file IS committed — it ensures reproducible installs)
+.pnpm-debug.log*
+.pnpm-store/
+
+# lerna / nx / turborepo
+lerna-debug.log*
+.turbo/
+.nx/cache/
+
+# Misc package manager logs
+pnpm-debug.log*
+
+
+# ────────────────────────────────────────────────────────────
+# 3. BUILD & COMPILE OUTPUT
+# ────────────────────────────────────────────────────────────
+dist/
+dist-ssr/
+build/
+out/
+.output/
+.vercel/output/
+.netlify/
+.svelte-kit/
+storybook-static/
+
+# Framework-specific
+.next/
+.nuxt/
+.vuepress/dist/
+.serverless/
+.fusebox/
+.dynamodb/
+
+# TypeScript
+*.tsbuildinfo
+.tsbuildinfo
+
+
+# ────────────────────────────────────────────────────────────
+# 4. ENVIRONMENT VARIABLES & SECRETS  ⚠️ NEVER COMMIT THESE
+# ────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+secrets/
+.secrets
+
+
+# ────────────────────────────────────────────────────────────
+# 5. CACHES
+# ────────────────────────────────────────────────────────────
+.cache/
+.parcel-cache/
+.eslintcache
+.stylelintcache
+.prettiercache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
 *.local
 
-# Editor directories and files
+
+# ────────────────────────────────────────────────────────────
+# 6. LOGS
+# ────────────────────────────────────────────────────────────
+logs/
+*.log
+log/
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+
+# ────────────────────────────────────────────────────────────
+# 7. TESTING & COVERAGE
+# ────────────────────────────────────────────────────────────
+coverage/
+*.lcov
+.nyc_output/
+junit.xml
+test-results/
+playwright-report/
+blob-report/
+
+
+# ────────────────────────────────────────────────────────────
+# 8. IDEs & EDITORS
+# ────────────────────────────────────────────────────────────
+
+# VS Code  (project settings are per-machine; keep extensions list only)
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+
+# JetBrains (IntelliJ, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Eclipse
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# Vim / Neovim
+*.sw?
+*.swp
+*.swo
+.vim/
+Session.vim
+Sessionx.vim
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# Other editors
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+
+
+# ────────────────────────────────────────────────────────────
+# 9. AI CODING ASSISTANTS & AGENT TOOLS
+#    These directories store local machine state, logs,
+#    memory, and API keys — they must NEVER be committed.
+# ────────────────────────────────────────────────────────────
+.gemini/
+.claude/
+.cursor/
+.cursorrules
+.codeium/
+.copilot/
+.tabnine/
+.kite/
+.aider*
+.continue/
+.agent/
+.agents/
+.superpowers/
+.playwright-cli/
+.claude-code/
+.ai/
+
+
+# ────────────────────────────────────────────────────────────
+# 10. RUNTIME & MISCELLANEOUS
+# ────────────────────────────────────────────────────────────
+pids/
+*.pid
+*.seed
+*.pid.lock
+.node_repl_history
+*.tgz
+lib-cov/
+.lock-wscript
+.wafpickle-*
+build/Release
+.node_repl_history
