@@ -1,0 +1,29 @@
+# Yash Maheshwari
+
+> ML researcher (high school, Mountain View, California, Class of 2027) working on efficient small language models, healthcare AI agent benchmarks, and student-led AI policy. Research intern at Stanford's Shah Lab (Stanford Medicine) and Lemons Lab (Stanford Graduate School of Education).
+
+## Research
+- **BiRWKV-7** (accepted, BabyLM Workshop at EMNLP 2026; first author): a ~28M-parameter subquadratic recurrent language model, O(T) training, trained on Apple M5 hardware with MLX. Reaches 69.5% BLiMP, comparable to a 124M-parameter transformer baseline (69.8%) with about 23% of the parameters. 16x recurrent-state compression with no BLiMP loss.
+- **Training Into the Container: The Projection Gap Below One Bit per Block-Linear Weight** (submitted, NeurIPS 2026 AXIOM Workshop): below one bit per weight, one-shot post-training compression lands at 5.8-6.4 bits per byte while native quantization-aware training stays near 3; adapting only the full-precision interface (~8% of parameters) recovers 97% of the gap.
+- **Below One Bit: Training Route and Budget Shape Robustness Under On-Device Storage Constraints** (submitted, NeurIPS 2026 ODI Workshop): natively trained sub-1-bit models degrade less under corrupted input on code, at every scale and seed tested.
+- **HealthAdminBench V2** (in development, Stanford Shah Lab with Kinetic Systems): benchmark of LLM agents on healthcare administrative work (prior authorizations, denial appeals, DME orders) in a realistic Epic EHR environment on the Harbor framework.
+- **Small language models as math tutors** (accepted, Journal of Emerging Investigators; first author): fine-tuned Llama 3 tutors; parameter count, not epochs, drives accuracy; the 8B model reached 93.7% step accuracy.
+- **Patents (filed 2025)**: Hierarchical Aggregation Tree for MCP Server Selection and Execution (non-provisional); Predictive Compliance for AI Agents (provisional).
+
+## Experience
+- Research Intern, Shah Lab, Stanford Medicine (Prof. Nigam Shah), Aug 2026-present; AI Research Contractor, Kinetic Systems, Jul-Aug 2026.
+- Research Intern, Lemons Lab, Stanford GSE (Prof. Chris Lemons), Jun 2025-present: Kai AI reading tutor (1,200+ students, 50+ teachers, 10+ districts); PAWS handwriting iPad app.
+- AI Engineering Intern, Aisera, Jun-Aug 2025: MCP servers for Salesforce, Clari and Slack; MCP bridge for HTTP and SSE.
+- Executive Board, MVHS Principal's Tech Internship, Sep 2024-present.
+
+## Speaking and policy
+- Keynote, FETC 2027 (Orlando, 9,000+ expected). Two keynote panels, Common Sense Media Summit 2026. Two sessions at FETC 2026. ASU+GSV Summit 2025. Panel at Google HQ.
+- Featured in The Washington Post (Oct 2025) for co-designing a school district AI philosophy with students, parents and teachers.
+- Met 10 legislative offices across 9 states on AI bills; contacted 1,500+ state legislators on 75+ bills.
+
+## Links
+- Website: https://yash-maheshwari.com/
+- Resume (PDF): https://yash-maheshwari.com/resume/Yash_Maheshwari_Resume.pdf
+- GitHub: https://github.com/yashmahe2020
+- LinkedIn: https://www.linkedin.com/in/yashmaheshwari2009/
+- Email: yashmahe2018@gmail.com

@@ -1,277 +1,246 @@
-
-import { StatChip, Experience, Project, ResearchItem, Award, SkillGroup, SpeakingEvent } from './types';
-
-export const PERSONAL_INFO = {
-  name: "Yash Maheshwari",
-  title: "Founder & AI Researcher",
-  tagline: "Building the next generation of AI agents, policy, and educational tools.",
-  email: "yashmahe2018@gmail.com",
-  linkedin: "https://www.linkedin.com/in/yashmaheshwari2009/",
-  instagram: "https://www.instagram.com/yashhhh__m/",
-  github: "https://github.com/yashmahe2020",
-  resume: "/resume/yash-maheshwari-resume-2025.pdf",
-  bio: "Motivated high school student and researcher focusing on Small Language Models (SLMs) and AI agent orchestration. From launching 501(c)(3) non-profits to filing US patents and engineering AI testing suites at Stanford labs, I bridge technical innovation with systemic policy design."
+export const PROFILE = {
+  name: 'Yash Maheshwari',
+  kicker: 'ML researcher · Mountain View, California',
+  pitch:
+    "I build small language models that perform better with fewer resources, write the benchmark tasks that frontier agents still fail, and bring a student's view of AI to classrooms, conference stages and state legislatures.",
+  now: 'Healthcare AI · Stanford Shah Lab',
+  email: 'yashmahe2018@gmail.com',
+  github: 'https://github.com/yashmahe2020',
+  linkedin: 'https://www.linkedin.com/in/yashmaheshwari2009/',
+  instagram: 'https://www.instagram.com/yashhhh__m/',
+  resume: '/resume/Yash_Maheshwari_Resume.pdf',
+  photo: '/images/yashmaheshwari.png',
 };
 
-export const STATS: StatChip[] = [
-  { label: "US Patents", value: "2", icon: "FileText" },
-  { label: "iOS Apps", value: "3", icon: "Smartphone" },
-  { label: "National Stages", value: "4+", icon: "Mic2" },
-  { label: "Funding Raised", value: "$25k+", icon: "TrendingUp" }
+export const NAV = [
+  { label: 'Research', href: '#research' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Speaking', href: '#stage' },
+  { label: 'Policy', href: '#policy' },
+  { label: 'Founded', href: '#founded' },
 ];
 
-export const EXPERIENCES: Experience[] = [
+export const HIGHLIGHTS = [
+  { value: 'EMNLP ’26', label: 'First-author paper, accepted to the BabyLM Workshop' },
+  { value: '2 Stanford labs', label: 'Shah Lab (Medicine) and Lemons Lab (Education)' },
+  { value: '2 patents', label: 'AI agent infrastructure filings, 2025' },
+  { value: '9,000+', label: 'Expected audience for my FETC 2027 keynote', accent: true },
+];
+
+export interface Bar {
+  label: string;
+  value: string;
+  width: number; // percent of track
+  tone: 'accent' | 'teal' | 'muted';
+}
+
+export interface Paper {
+  badges: { text: string; tone: 'indigo' | 'teal' | 'plain' }[];
+  title: string;
+  facts?: { term: string; detail: string; strong?: boolean }[];
+  papers?: { venue: string; lead: string; strong: string }[];
+  chart: { caption: string; bars: Bar[]; note: string };
+}
+
+export const FEATURED_RESEARCH: Paper[] = [
   {
-    id: "aisera",
-    company: "Aisera Inc",
-    role: "Applied AI Intern",
-    period: "Jun 2025 - Aug 2025",
-    description: "AI agent orchestration and MCP infrastructure development.",
-    bullets: [
-      "Developed MCP servers for enterprise sales demos.",
-      "Built open-source MCP bridge for legacy HTTP/SSE requests.",
-      "Won 2nd place in AI Hackathon among 30+ engineering teams."
+    badges: [
+      { text: 'Accepted · EMNLP 2026 BabyLM Workshop', tone: 'indigo' },
+      { text: 'First author', tone: 'plain' },
     ],
-    tags: ["MCP", "AI Agents", "Python"]
-  },
-  {
-    id: "mvhs-tech",
-    company: "Mountain View High School",
-    role: "Executive Board Member, Tech Internship",
-    period: "May 2025 - Present",
-    description: "Leading student-led AI innovation and raising $25k+ in funding.",
-    bullets: [
-      "Featured in Washington Post for district AI policy co-design.",
-      "Developed an AI Policy Pathway tool for educators.",
-      "Built RAG-based digital tutor app using OpenAI."
+    title: 'BiRWKV-7: a 28M-parameter model that learns grammar like a child',
+    facts: [
+      { term: 'Question', detail: 'How much grammar can a model learn from ~10M words?' },
+      { term: 'Model', detail: 'Subquadratic RNN, O(T), trained on a MacBook in MLX' },
+      { term: 'Result', detail: 'Matches a 124M transformer with 23% of the parameters', strong: true },
+      { term: 'Bonus', detail: '16× state compression, zero accuracy loss' },
     ],
-    tags: ["Leadership", "RAG", "EdTech"]
+    chart: {
+      caption: 'Grammar score (BLiMP) vs. model size',
+      bars: [
+        { label: 'BiRWKV-7 · 28M', value: '69.5%', width: 22.6, tone: 'accent' },
+        { label: 'BabyLlama · 124M', value: '69.8%', width: 100, tone: 'muted' },
+      ],
+      note: 'Bar length = parameter count',
+    },
   },
   {
-    id: "stanford-kai",
-    company: "Stanford Lab Research",
-    role: "Research Engineer",
-    period: "Jun 2025 - Present",
-    description: "Developing 'Kai' for students with English comprehension challenges.",
-    bullets: [
-      "Reduced model latency by 60% via A/B testing prompts.",
-      "Built an AI testing suite to evaluate latency and performance.",
-      "Presented results at Stanford Down Syndrome Conference."
+    badges: [
+      { text: 'Under review · NeurIPS 2026 Workshops', tone: 'teal' },
+      { text: '2 papers submitted', tone: 'plain' },
     ],
-    tags: ["AI Ops", "Testing", "Stanford"]
-  }
+    title: 'Below one bit: how you train a tiny model matters more than its size',
+    papers: [
+      {
+        venue: 'AXIOM · Training Into the Container: The Projection Gap',
+        lead: 'Compressing a trained model below 1 bit per weight breaks it.',
+        strong: 'Retraining just 8% of it recovers 97%.',
+      },
+      {
+        venue: 'ODI · Training Route and Budget Shape Robustness',
+        lead: 'Natively trained sub-1-bit models handle noisy input better,',
+        strong: 'on every seed and scale tested.',
+      },
+    ],
+    chart: {
+      caption: 'Prediction error at 0.41 bits/weight · lower is better',
+      bars: [
+        { label: 'Trained natively', value: '~3.1 bpb', width: 48, tone: 'teal' },
+        { label: 'Compressed after training', value: '5.8–6.4 bpb', width: 100, tone: 'muted' },
+      ],
+      note: 'Past 5.06 bpb, a model is worse than guessing letter frequencies',
+    },
+  },
 ];
 
-export const SPEAKING_EVENTS: SpeakingEvent[] = [
+export const MORE_RESEARCH = [
   {
-    id: "fetc-2026",
-    title: "FETC Conference: AI Ethics & Innovation",
-    location: "Orlando, Florida",
-    date: "2026",
-    description: "Presenting on AI Ethics and student-led innovation programs for national educators.",
-    tags: ["Conference", "Ethics", "Innovation"]
+    status: 'In development',
+    title: 'HealthAdminBench V2',
+    detail: 'hospital-admin tasks frontier agents still fail, on a realistic Epic EHR',
+    meta: 'Stanford Medicine × Kinetic',
   },
   {
-    id: "asugsv-2025",
-    title: "ASU+GSV Summit: Learners Light the Way",
-    location: "San Diego, California",
-    date: "2025",
-    description: "Presented the student-co-design model and AI card games to global ed-tech leaders.",
-    tags: ["Policy", "EdTech", "Co-Design"]
+    status: 'Accepted',
+    title: 'Small models as math tutors',
+    detail: 'fine-tuned 8B Llama hits 93.7% step accuracy',
+    meta: 'JEI · first author',
   },
   {
-    id: "google-2024",
-    title: "Google HQ: AI & Education Panel",
-    location: "Mountain View, CA",
-    date: "2025",
-    description: "Presented on a panel to Google engineers about AI design processes in classrooms.",
-    tags: ["Industry", "Panel", "Design"]
+    status: 'Patent · filed',
+    title: 'Hierarchical aggregation tree for MCP server selection',
+    detail: 'routes agent requests to the right tool',
+    meta: 'Non-provisional · 2025',
   },
   {
-    id: "cal-mscs",
-    title: "CAL-MSCS Day Statewide Educator",
-    location: "Mountain View, CA",
-    date: "2025",
-    description: "Led tours and presented to 80+ STEM teachers regarding engineering facility innovation.",
-    tags: ["STEM", "Showcase", "Leadership"]
+    status: 'Patent · filed',
+    title: 'Predictive compliance for AI agents',
+    detail: 'flags unsafe tool calls before they run',
+    meta: 'Provisional · Oct 2025',
   },
-  {
-    id: "parent-night",
-    title: "AI & Education Parent Night",
-    location: "Mountain View High School",
-    date: "2025",
-    description: "Organized a panel with superintendents and educators for 60+ participants.",
-    tags: ["Community", "Education", "Q&A"]
-  },
-  {
-    id: "stanford-conf",
-    title: "Annual Stanford Down Syndrome Conference",
-    location: "Stanford, CA",
-    date: "2025",
-    description: "Introduced Kai, the AI English tutor, to dozens of educators and administrators.",
-    tags: ["Research", "Booth", "Inclusion"]
-  },
-  {
-    id: "kci-2025",
-    title: "KCI Presentation (Krause Center for Innovation)",
-    location: "Foothill College",
-    date: "2025",
-    description: "Showcased student-led Tech Internship Program and focused AI workshops.",
-    tags: ["Innovation", "Workshops", "Academic"]
-  },
-  {
-    id: "brazil-tour",
-    title: "Brazilian Delegate Tour (Google Sponsored)",
-    location: "Mountain View High School",
-    date: "2025",
-    description: "Toured educators from Brazil through the engineering wing showcasing campus innovation.",
-    tags: ["International", "Touring", "Outreach"]
-  }
 ];
 
-export const RESEARCH_PROJECTS: ResearchItem[] = [
+export const EXPERIENCE = [
   {
-    id: "patent-mcp",
-    title: "Hierarchical Aggregation Tree for MCP Selection",
-    organization: "US Patent (Non-provisional)",
-    period: "Filed 2025",
-    description: "A novel architecture for dynamic Model Context Protocol server selection.",
-    type: 'patent',
-    highlights: [
-      "Dynamic invocation of Model Context Protocol servers.",
-      "Optimizes agentic workflows via real-time intent selection."
-    ]
+    period: 'Aug 2026 — Present',
+    org: 'Stanford Medicine, Shah Lab',
+    role: 'Research Intern, Healthcare AI',
+    bullets: [
+      'Maintaining HealthAdminBench; A/B testing models with AI lab engineers',
+      'Building HealthAdminBench V2 on Harbor + a realistic Epic EHR',
+      'Tracing where each model gets stuck · with Dr. Nigam Shah',
+    ],
+    metric: 'Epic',
+    metricLabel: 'real EHR environment',
   },
   {
-    id: "patent-compliance",
-    title: "Predictive Compliance for AI Agents",
-    organization: "US Patent (Provisional)",
-    period: "Filed 2025",
-    description: "Security monitoring system for preemptive agentic alignment detection.",
-    type: 'patent',
-    highlights: [
-      "Monitoring system ensuring agentic alignment.",
-      "Detects security breaches before invocation via forward detection."
-    ]
+    period: 'Jul — Aug 2026',
+    org: 'Kinetic Systems',
+    role: 'AI Research Contractor',
+    bullets: [
+      'Wrote healthcare workflow tasks frontier models could not yet solve',
+      'Traced model error paths on each task for frontier-lab clients',
+    ],
+    metric: 'Frontier',
+    metricLabel: 'AI lab clients',
   },
   {
-    id: "slm-research",
-    title: "Optimizing SLMs for Math Tutoring",
-    organization: "Stanford Lab / JEI",
-    period: "2024 - 2026",
-    description: "Research on maximizing SLM performance while minimizing resources.",
-    type: 'lab',
-    highlights: [
-      "Compared parameter size vs epochs for Llama 3.2 fine-tuning.",
-      "8B models achieved 93.7% step accuracy in math tutoring.",
-      "Published in Journal of Emerging Investigators."
-    ]
-  }
+    period: 'Jun 2025 — Present',
+    org: 'Stanford Graduate School of Education, Lemons Lab',
+    role: 'Research Intern: Kai & PAWS',
+    bullets: [
+      'Kai: AI reading tutor in 10+ districts, 50+ teachers',
+      'Built the AIOps eval suite for Kai · cut latency over 60%',
+      'PAWS: handwriting tutor, web prototype → iPad app w/ <50ms deterministic responses',
+    ],
+    metric: '1,200+',
+    metricLabel: 'students on Kai',
+  },
+  {
+    period: 'Jun — Aug 2025',
+    org: 'Aisera',
+    role: 'AI Engineering Intern',
+    bullets: [
+      'MCP servers linking agents to Salesforce, Clari and Slack',
+      'Open-source MCP bridge for HTTP + SSE clients',
+      'Co-inventor on 1 patent · 2nd in company hackathon',
+    ],
+    metric: '4',
+    metricLabel: 'MCP servers developed',
+  },
+  {
+    period: 'Sep 2024 — Present',
+    org: 'Mountain View High School',
+    role: "Executive Board, Principal's Tech Internship",
+    bullets: [
+      'Founding cohort · grew program to 60+ students',
+      'National conference talks, AI events, teacher trainings',
+    ],
+    metric: '60+',
+    metricLabel: 'interns recruited',
+  },
 ];
 
-export const PROJECTS: Project[] = [
-  {
-    id: "tech-site",
-    title: "Tech Internship Portal",
-    description: "RAG-integrated chatbot site for district AI policy resources.",
-    tags: ["Next.js", "RAG", "OpenAI"],
-    link: "https://mvhs-tech.vercel.app/",
-    image: "/images/mvhs-tech-website.png"
-  },
-  {
-    id: "policy-path",
-    title: "AI Policy Pathway",
-    description: "Helps educators build custom AI boundaries based on demographics.",
-    tags: ["GPT-4", "Education", "Vercel"],
-    link: "https://google-innovator-project.vercel.app/",
-    image: "/images/ai-policy-pathway.png"
-  },
-  {
-    id: "automated-knowledge",
-    title: "Automated Knowledge Support",
-    description: "API for seamless access to school info via RAG and OpenAI integrations.",
-    tags: ["API", "RAG", "Automation"],
-    link: "https://automated-knowledge-support.vercel.app/",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: "battle-timz",
-    title: "Battle Timz Card Game",
-    description: "Educational robotics/coding card game sold on Amazon & Kickstarter.",
-    tags: ["Product", "Robotics", "E-commerce"],
-    link: "#",
-    image: "/images/battle-timz.png"
-  },
-  {
-    id: "mcp-bridge",
-    title: "Aisera MCP Bridge",
-    description: "Open-source bridge connecting enterprise platforms to any MCP server.",
-    tags: ["Open Source", "MCP", "Orchestration"],
-    link: "#",
-    image: "/images/mcp-bridge.png"
-  }
+export const QUOTE = {
+  text: 'Misaligned incentives are dangerous.',
+  source: 'From my Common Sense Media 2026 talk',
+};
+
+export const PRESS = ['The Washington Post', 'Los Altos Town Crier', 'Center for Digital Education', 'Amplify', 'Thinkering Collective'];
+
+export const TALKS = [
+  { date: 'Jan 2027', title: 'FETC · Keynote', detail: 'Largest ed-tech conference in the US', aside: '9,000+', featured: true },
+  { date: '2026', title: 'Common Sense Media Summit · Two keynote panels', detail: 'Opened and closed day one · met Secretary Hillary Clinton', aside: '600+', big: true },
+  { date: '2026', title: 'FETC · Two sessions', detail: 'AI ethics through play · student-led tech internships', aside: 'Orlando' },
+  { date: '2025', title: 'ASU+GSV Summit · “Learners Light the Way”', detail: 'AI Show demo · 1 of 3 high schoolers at Walton breakfast', aside: 'San Diego' },
+  { date: '2025', title: 'Google HQ · Panel with engineers and designers', detail: 'How students use AI, and what to design for', aside: 'Mountain View' },
 ];
 
-export const AWARDS: Award[] = [
-  {
-    title: "Congressional App Award",
-    issuer: "Anna Eshoo",
-    date: "2024",
-    icon: "Award",
-    description: "Recognized by the U.S. House of Representatives for creating a financial literacy tool."
-  },
-  {
-    title: "FRC Rookie All-Star SF Regional",
-    issuer: "FIRST Robotics",
-    date: "2024",
-    icon: "Target",
-    description: "Led software development for a first-year team that qualified for World Championships."
-  },
-  {
-    title: "Winner: MVHacks 2025",
-    issuer: "MVHacks",
-    date: "2025",
-    icon: "Code",
-    description: "Won 1st Place overall for a novel wildfire prediction app using Llama 3.2 3B parameter model."
-  },
-  {
-    title: "2nd Place AI Hackathon",
-    issuer: "Aisera Inc",
-    date: "2025",
-    icon: "Code",
-    description: "Built a functional MCP bridge and showcased it to industry leaders at Aisera."
-  },
-  {
-    title: "Most Popular Award",
-    issuer: "Community Hackathon",
-    date: "2024",
-    icon: "Star",
-    description: "Voted #1 most popular project by community members and attendees."
-  },
-  {
-    title: "Judges' Choice Award",
-    issuer: "FTC Robotics",
-    date: "2025",
-    icon: "Star",
-    description: "Special recognition awarded by the judging panel at the FTC Robotics competition."
-  }
+export const MORE_TALKS =
+  'Foothill College KCI · CAL-MSCS statewide educator day (80+ teachers) · AI & Education Parent Night (150+ across 2 years) · AI Playlab (100+) · Stanford Down Syndrome Conference';
+
+export const WAPO = {
+  href: 'https://www.washingtonpost.com/technology/2025/10/05/school-ai-homework-teens/',
+  meta: 'The Washington Post · Oct 2025',
+  headline: "Featured as a national model for students helping write their district's AI policy",
+  detail: '3 district workshops → drafted district AI philosophy',
+};
+
+export const POLICY_ALSO = [
+  { name: 'AI Bill of Rights games', detail: 'with EngageAI Institute' },
+  { name: 'District EdTech Committee', detail: 'AI adoption goals' },
+  { name: "Principal's Advisory Council", detail: 'Lead' },
 ];
 
-export const SKILL_GROUPS: SkillGroup[] = [
-  {
-    category: "AI & Intelligence",
-    skills: ["Llama Fine-tuning", "RAG Architectures", "MCP Orchestration", "Vector Databases", "Prompt Engineering", "Agentic Workflows", "OpenAI & Gemini API"]
-  },
-  {
-    category: "Software Engineering",
-    skills: ["TypeScript", "Next.js", "Python", "Node.js", "PostgreSQL", "REST APIs", "Tailwind CSS", "Vercel", "Git/GitHub"]
-  },
-  {
-    category: "App Development",
-    skills: ["Swift", "SwiftUI", "Xcode", "Mobile UI/UX", "iOS SDK", "App Store Connect"]
-  },
-  {
-    category: "Robotics & Mechanical",
-    skills: ["Java", "C++", "Electrical", "Mechanical"]
-  }
+export const POLICY_STATS = [
+  { value: '1,500+', label: 'legislators contacted' },
+  { value: '75+', label: 'AI bills tracked' },
+  { value: '10+', label: 'meetings' },
+];
+
+export const BILLS = [
+  { state: 'FL', bill: 'SB 482', topic: 'AI Bill of Rights' },
+  { state: 'ME', bill: 'LD 2162', topic: 'Human-like features in AI' },
+  { state: 'MI', bill: 'SB 760', topic: 'AI companion chatbot regulation' },
+  { state: 'PA', bill: 'SB 939 · SB 1090', topic: 'AI regulatory sandbox, AI safeguards' },
+  { state: 'CO', bill: 'HB26-1139', topic: 'AI in health care' },
+  { state: 'NY', bill: 'A09253', topic: 'AI use in policing' },
+  { state: 'OH', bill: 'SCR 14', topic: 'State authority over AI regulation' },
+  { state: 'MO', bill: 'HB 2239', topic: 'Data center buildout' },
+  { state: 'CA', bill: '—', topic: 'Student perspective, office of Rep. Sam Liccardo' },
+];
+
+export const FOUNDED = [
+  { name: 'RL Game Club', detail: 'Founder · RL through game-bot competitions' },
+  { name: 'Tech Spark 501(c)(3)', detail: 'Co-founder · 70+ K-8 students taught' },
+  { name: 'FTC robotics team', detail: 'Co-founder & student mentor' },
+  { name: 'FRC 9584', detail: 'Software lead · 27th in FRC Championship Division' },
+];
+
+export const AWARDS = [
+  { name: 'MVHacks, 1st place overall', year: '2025' },
+  { name: 'Aisera AI Hackathon, 2nd of 30 teams', year: '2025' },
+  { name: 'Highest Rookie Team Award, FRC Worlds', year: '2024' },
+  { name: 'Congressional App Challenge, Honorable Mention', year: '2024' },
+  { name: "FTC Judges' Choice Award", year: '2024–25' },
 ];

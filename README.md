@@ -1,48 +1,34 @@
-# Yash Maheshwari - Portfolio
+# Yash Maheshwari · Portfolio
 
-Welcome to my personal portfolio. This repository houses the source code for my personal website, showcasing my projects, research, and journey as a software engineer.
+Source for [yash-maheshwari.com](https://yash-maheshwari.com): research, experience, speaking and AI policy work.
 
-## 🚀 About This Project
+## Stack
 
-I built this site to be a central hub for my work. It's designed to be clean, fast, and responsive, providing a clear overview of my technical skills and professional experience.
+- React 19 + TypeScript, built with Vite
+- Plain CSS (`index.css`) with design tokens, no runtime CSS framework
+- No UI dependencies beyond React; icons are inline SVG
 
-The site features:
-- **Project Showcase**: A curated list of my key technical projects.
-- **Experience Timeline**: A history of my internships and roles.
-- **Research**: Highlights of my work in AI and software development.
+## SEO and AI discoverability
 
-## 🛠️ Built With
+- `pnpm build` prerenders the page to static HTML (`scripts/prerender.mjs`), so crawlers and AI agents get the full content without running JavaScript; the client hydrates it.
+- `index.html` carries meta, Open Graph and JSON-LD (Person, ProfilePage, ScholarlyArticle).
+- `public/robots.txt` allows search and AI crawlers; `public/sitemap.xml`; `public/llms.txt` is a plain-markdown summary for LLMs. Keep `llms.txt` and the JSON-LD in sync when `content.ts` changes.
 
-- **React & TypeScript**: For a robust and type-safe frontend.
-- **Vite**: Ensuring lightning-fast build times and development.
-- **Tailwind CSS**: For a modern, responsive design system.
-- **Framer Motion**: Adding smooth, natural animations.
+## Editing content
 
-## 💻 Running Locally
+All copy lives in `content.ts`. Change text, numbers or links there; components in `components/` only handle layout.
 
-To run this project on your local machine:
+The résumé PDF is served from `public/resume/Yash_Maheshwari_Resume.pdf`.
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/yashmahe2020/Portfolio.git
-    cd Portfolio
-    ```
+## Running locally
 
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
+```bash
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm build      # type-checks, then builds to dist/
+pnpm preview    # serves dist/
+```
 
-3.  **Start the development server**
-    ```bash
-    npm run dev
-    ```
-    Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+## Deploying
 
-## 🚢 Deployment
-
-This project is optimized for deployment on platforms like Vercel or Netlify. The build command `npm run build` generates a production-ready `dist` folder.
-
----
-
-© 2026 Yash Maheshwari. All rights reserved.
+Pushing to `main` deploys through the Vercel GitHub integration. The build output is `dist/`.
