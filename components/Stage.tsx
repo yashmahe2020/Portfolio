@@ -10,7 +10,7 @@ const Stage: React.FC = () => (
         <blockquote>“{QUOTE.text}”</blockquote>
         <figcaption className="mono small muted">{QUOTE.source}</figcaption>
         <div className="press">
-          <span className="eyebrow">Interviewed by</span>
+          <span className="eyebrow">Featured &amp; interviewed by</span>
           <p>{PRESS.join(' · ')}</p>
         </div>
       </figure>

@@ -8,5 +8,10 @@
 - [x] SEO: meta description, Open Graph, canonical, JSON-LD, favicon
 - [x] Verify: `pnpm build` clean, no console errors, no horizontal scroll at 390px, résumé link 200
 
+- [x] Prerender to static HTML + hydrate (content visible without JS)
+- [x] AI-SEO: robots.txt allowing AI crawlers, sitemap.xml, llms.txt, JSON-LD @graph, OG image
+- [x] Independent PR review: fixed résumé mismatches (Shah/Kinetic split, titles, JEI accepted, press), CSS breakpoint bugs, menu Escape/aria-controls
+- [x] Canvas synced to PR content
+
 ## Review
 Built and checked in Chromium at 1440, 820 and 390 px. Fixed the table caption rendering inside a cell and the logo spacing found in that pass.

@@ -242,13 +242,14 @@ ul, ol { padding: 0; list-style: none; }
 .footer-bottom { display: flex; justify-content: space-between; gap: 16px; margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); }
 
 /* Motion */
-.reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.is-visible { opacity: 1; transform: none; }
-.reveal .bar-fill { transform: scaleX(0); transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s; }
-.reveal.is-visible .bar-fill { transform: scaleX(1); }
+/* Only hide when JS is running, so prerendered content stays visible without it */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+.js .reveal .bar-fill { transform: scaleX(0); transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s; }
+.js .reveal.is-visible .bar-fill { transform: scaleX(1); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .reveal .bar-fill { opacity: 1; transform: none; transition: none; }
+  .js .reveal, .js .reveal .bar-fill { opacity: 1; transform: none; transition: none; }
 }
 
 /* Responsive */
@@ -284,6 +285,7 @@ ul, ol { padding: 0; list-style: none; }
   .highlights li:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
   .section { padding-top: 88px; padding-bottom: 88px; }
   .band .section { padding-top: 88px; }
+  .research { padding-top: 0; }
   .feature { grid-template-columns: 1fr; }
   .ledger li { grid-template-columns: 1fr; gap: 6px; }
   .ledger-meta { text-align: left; }
@@ -301,7 +303,7 @@ ul, ol { padding: 0; list-style: none; }
   .hero-pitch { font-size: 18px; }
   .hero-photo img { height: 420px; }
   .highlights { grid-template-columns: 1fr; }
-  .highlights li, .highlights li:nth-child(even) { padding: 20px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .highlights li, .highlights li:first-child, .highlights li:nth-child(odd), .highlights li:nth-child(even) { padding: 20px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .highlights li:last-child { border-bottom: 0; }
   .stat { font-size: 32px; }
   .section-head h2 { font-size: 40px; }

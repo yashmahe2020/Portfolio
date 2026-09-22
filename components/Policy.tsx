@@ -15,7 +15,7 @@ const Policy: React.FC = () => (
             <span className="press-link">Read the article →</span>
           </a>
           <div>
-            <span className="eyebrow">Also</span>
+            <h3 className="eyebrow">Also</h3>
             <ul className="rows">
               {POLICY_ALSO.map((p) => (
                 <li key={p.name}>
@@ -37,7 +37,7 @@ const Policy: React.FC = () => (
           </ul>
           <div className="table-scroll">
             <table className="bills">
-              <caption className="eyebrow">Meetings with legislative offices, 2026</caption>
+              <caption className="eyebrow">AI bills discussed with legislative offices, 2026</caption>
               <thead>
                 <tr>
                   <th scope="col">State</th>

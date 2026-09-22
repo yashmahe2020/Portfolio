@@ -101,7 +101,7 @@ export const MORE_RESEARCH = [
     meta: 'Stanford Medicine × Kinetic',
   },
   {
-    status: 'Published',
+    status: 'Accepted',
     title: 'Small models as math tutors',
     detail: 'fine-tuned 8B Llama hits 93.7% step accuracy',
     meta: 'JEI · first author',
@@ -122,24 +122,35 @@ export const MORE_RESEARCH = [
 
 export const EXPERIENCE = [
   {
-    period: 'Jul 2026 — Present',
-    org: 'Stanford Medicine, Shah Lab + Kinetic Systems',
+    period: 'Aug 2026 — Present',
+    org: 'Stanford Medicine, Shah Lab',
     role: 'Research Intern, Healthcare AI',
     bullets: [
+      'Maintaining HealthAdminBench; A/B testing models with AI lab engineers',
       'Building HealthAdminBench V2 on Harbor + a realistic Epic EHR',
-      'Designing tasks frontier agents fail, with a frontier AI lab',
-      'Tracing where each model gets stuck · with Dr. Shah',
+      'Tracing where each model gets stuck · with Dr. Nigam Shah',
     ],
     metric: 'Epic',
     metricLabel: 'real EHR environment',
   },
   {
+    period: 'Jul — Aug 2026',
+    org: 'Kinetic Systems',
+    role: 'AI Research Contractor',
+    bullets: [
+      'Wrote healthcare workflow tasks frontier models could not yet solve',
+      'Traced model error paths on each task for frontier-lab clients',
+    ],
+    metric: 'Frontier',
+    metricLabel: 'AI lab clients',
+  },
+  {
     period: 'Jun 2025 — Present',
     org: 'Stanford Graduate School of Education, Lemons Lab',
-    role: 'AI Researcher: Kai & PAWS',
+    role: 'Research Intern: Kai & PAWS',
     bullets: [
       'Kai: AI reading tutor in 10+ districts, 50+ teachers',
-      "Built the lab's model-eval suite · cut latency over 60%",
+      'Built the AIOps eval suite for Kai · cut latency over 60%',
       'PAWS: handwriting tutor, web prototype → iPad app w/ <50ms deterministic responses',
     ],
     metric: '1,200+',
@@ -148,7 +159,7 @@ export const EXPERIENCE = [
   {
     period: 'Jun — Aug 2025',
     org: 'Aisera',
-    role: 'Applied AI Intern',
+    role: 'AI Engineering Intern',
     bullets: [
       'MCP servers linking agents to Salesforce, Clari and Slack',
       'Open-source MCP bridge for HTTP + SSE clients',
@@ -175,14 +186,14 @@ export const QUOTE = {
   source: 'From my Common Sense Media 2026 talk',
 };
 
-export const PRESS = ['The Washington Post', 'Center for Digital Education', 'Amplify', 'Thinkering Collective'];
+export const PRESS = ['The Washington Post', 'Los Altos Town Crier', 'Center for Digital Education', 'Amplify', 'Thinkering Collective'];
 
 export const TALKS = [
   { date: 'Jan 2027', title: 'FETC · Keynote', detail: 'Largest ed-tech conference in the US', aside: '9,000+', featured: true },
   { date: '2026', title: 'Common Sense Media Summit · Two keynote panels', detail: 'Opened and closed day one · met Secretary Hillary Clinton', aside: '600+', big: true },
   { date: '2026', title: 'FETC · Two sessions', detail: 'AI ethics through play · student-led tech internships', aside: 'Orlando' },
   { date: '2025', title: 'ASU+GSV Summit · “Learners Light the Way”', detail: 'AI Show demo · 1 of 3 high schoolers at Walton breakfast', aside: 'San Diego' },
-  { date: '2025', title: 'Google HQ · Panel for engineers and designers', detail: 'How students use AI, and what to design for', aside: 'Mountain View' },
+  { date: '2025', title: 'Google HQ · Panel with engineers and designers', detail: 'How students use AI, and what to design for', aside: 'Mountain View' },
 ];
 
 export const MORE_TALKS =

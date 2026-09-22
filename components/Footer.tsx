@@ -19,7 +19,7 @@ const Footer: React.FC = () => (
         </div>
       </div>
       <div className="footer-bottom mono small muted">
-        <span>© {new Date().getFullYear()} Yash Maheshwari</span>
+        <span suppressHydrationWarning>© {new Date().getFullYear()} Yash Maheshwari</span>
         <span>Mountain View, California</span>
       </div>
     </div>
