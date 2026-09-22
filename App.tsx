@@ -1,38 +1,52 @@
-
 import React, { useEffect } from 'react';
-import Navigation from './components/Navigation';
+import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
-import ExperienceTimeline from './components/ExperienceTimeline';
-import Speaking from './components/Speaking';
 import Research from './components/Research';
-import Projects from './components/Projects';
-import Resume from './components/Resume';
-import Skills from './components/Skills';
-import Awards from './components/Awards';
+import Experience from './components/Experience';
+import Stage from './components/Stage';
+import Policy from './components/Policy';
+import Founded from './components/Founded';
 import Footer from './components/Footer';
-import Background from './components/Background';
+
+const useReveal = () => {
+  useEffect(() => {
+    const items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px -10% 0px' },
+    );
+    items.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+};
 
 const App: React.FC = () => {
+  useReveal();
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-900 selection:bg-primary/20 selection:text-primary antialiased">
-      <Background />
-      <Navigation />
-
-      <main className="relative z-10">
+    <>
+      <a href="#research" className="skip-link">Skip to content</a>
+      <Header />
+      <main>
         <Hero />
-        <About />
-        <ExperienceTimeline />
-        <Speaking />
         <Research />
-        <Projects />
-        <Awards />
-        <Resume />
-        <Skills />
+        <Experience />
+        <Stage />
+        <Policy />
+        <Founded />
       </main>
-
       <Footer />
-    </div>
+    </>
   );
 };
 
