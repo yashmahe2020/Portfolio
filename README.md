@@ -1,6 +1,6 @@
 # Yash Maheshwari · Portfolio
 
-Source for [yash-maheshwari.com](https://yash-maheshwari.com): research, experience, speaking and AI policy work.
+Source for [yash-maheshwari.com](https://www.yash-maheshwari.com): research, experience, speaking and AI policy work.
 
 ## Stack
 
