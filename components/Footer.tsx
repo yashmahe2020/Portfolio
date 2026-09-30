@@ -15,7 +15,7 @@ const Footer: React.FC = () => (
         <div className="footer-links">
           <a href={PROFILE.github} className="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
           <a href={PROFILE.linkedin} className="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
-          <a href={PROFILE.resume} className="btn btn-dark" target="_blank" rel="noopener">Résumé</a>
+          <a href={PROFILE.resume} className="btn btn-dark" target="_blank" rel="noopener">Resume</a>
         </div>
       </div>
       <div className="footer-bottom mono small muted">

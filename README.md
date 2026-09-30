@@ -18,7 +18,7 @@ Source for [yash-maheshwari.com](https://www.yash-maheshwari.com): research, exp
 
 All copy lives in `content.ts`. Change text, numbers or links there; components in `components/` only handle layout.
 
-The résumé PDF is served from `public/resume/Yash_Maheshwari_Resume.pdf`.
+The resume PDF is served from `public/resume/Yash_Maheshwari_Resume.pdf`.
 
 ## Running locally
 

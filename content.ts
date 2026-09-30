@@ -51,9 +51,9 @@ export const FEATURED_RESEARCH: Paper[] = [
     title: 'BiRWKV-7: a 28M-parameter model that learns grammar like a child',
     facts: [
       { term: 'Question', detail: 'How much grammar can a model learn from ~10M words?' },
-      { term: 'Model', detail: 'Subquadratic RNN, O(T), trained on a MacBook in MLX' },
+      { term: 'Model', detail: 'Subquadratic RNN, O(T), trained locally on a MacBook in MLX' },
       { term: 'Result', detail: 'Matches a 124M transformer with 23% of the parameters', strong: true },
-      { term: 'Bonus', detail: '16× state compression, zero accuracy loss' },
+      { term: 'Bonus', detail: '16× recurrent-state compression' },
     ],
     chart: {
       caption: 'Grammar score (BLiMP) vs. model size',
@@ -110,13 +110,13 @@ export const MORE_RESEARCH = [
     status: 'Patent · filed',
     title: 'Hierarchical aggregation tree for MCP server selection',
     detail: 'routes agent requests to the right tool',
-    meta: 'Non-provisional · 2025',
+    meta: 'Non-provisional · sole inventor · Oct 2025',
   },
   {
     status: 'Patent · filed',
     title: 'Predictive compliance for AI agents',
     detail: 'flags unsafe tool calls before they run',
-    meta: 'Provisional · Oct 2025',
+    meta: 'Provisional · co-inventor with Aisera · Oct 2025',
   },
 ];
 
@@ -150,8 +150,8 @@ export const EXPERIENCE = [
     role: 'Research Intern: Kai & PAWS',
     bullets: [
       'Kai: AI reading tutor in 10+ districts, 50+ teachers',
-      'Built the AIOps eval suite for Kai · cut latency over 60%',
-      'PAWS: handwriting tutor, web prototype → iPad app w/ <50ms deterministic responses',
+      'Built the AIOps eval suite for Kai · cut latency 75%, then a non-LLM path answering in <50 ms',
+      'PAWS: kindergarten handwriting tutor, web prototype → native iPad app',
     ],
     metric: '1,200+',
     metricLabel: 'students on Kai',
@@ -163,7 +163,7 @@ export const EXPERIENCE = [
     bullets: [
       'MCP servers linking agents to Salesforce, Clari and Slack',
       'Open-source MCP bridge for HTTP + SSE clients',
-      'Co-inventor on 1 patent · 2nd in company hackathon',
+      'Co-inventor on 1 provisional patent · 2nd in company hackathon',
     ],
     metric: '4',
     metricLabel: 'MCP servers developed',
@@ -171,13 +171,14 @@ export const EXPERIENCE = [
   {
     period: 'Sep 2024 — Present',
     org: 'Mountain View High School',
-    role: "Executive Board, Principal's Tech Internship",
+    role: "Executive Board Member, Principal's Tech Internship",
     bullets: [
-      'Founding cohort · grew program to 60+ students',
-      'National conference talks, AI events, teacher trainings',
+      'Joined at launch · Executive Board since Jun 2025',
+      'Shipped AI Policy Pathway and Bridge the Gap 360',
+      'Organized Parent Night, CAL-MSCS Day and an AI Playlab',
     ],
-    metric: '60+',
-    metricLabel: 'interns recruited',
+    metric: '2',
+    metricLabel: 'tools shipped',
   },
 ];
 
@@ -189,7 +190,7 @@ export const QUOTE = {
 export const PRESS = ['The Washington Post', 'Los Altos Town Crier', 'Center for Digital Education', 'Amplify', 'Thinkering Collective'];
 
 export const TALKS = [
-  { date: 'Jan 2027', title: 'FETC · Keynote', detail: 'Largest ed-tech conference in the US', aside: '9,000+', featured: true },
+  { date: 'Jan 2027', title: 'FETC · Keynote', detail: 'One of the largest ed-tech conferences in the US', aside: '9,000+', featured: true },
   { date: '2026', title: 'Common Sense Media Summit · Two keynote panels', detail: 'Opened and closed day one · met Secretary Hillary Clinton', aside: '600+', big: true },
   { date: '2026', title: 'FETC · Two sessions', detail: 'AI ethics through play · student-led tech internships', aside: 'Orlando' },
   { date: '2025', title: 'ASU+GSV Summit · “Learners Light the Way”', detail: 'AI Show demo · 1 of 3 high schoolers at Walton breakfast', aside: 'San Diego' },
@@ -197,7 +198,7 @@ export const TALKS = [
 ];
 
 export const MORE_TALKS =
-  'Foothill College KCI · CAL-MSCS statewide educator day (80+ teachers) · AI & Education Parent Night (150+ across 2 years) · AI Playlab (100+) · Stanford Down Syndrome Conference';
+  'Foothill College KCI · CAL-MSCS statewide educator day (80+ teachers) · AI & Education Parent Night (60+) · AI Playlab (100+) · Stanford Down Syndrome Conference';
 
 export const WAPO = {
   href: 'https://www.washingtonpost.com/technology/2025/10/05/school-ai-homework-teens/',
@@ -215,7 +216,7 @@ export const POLICY_ALSO = [
 export const POLICY_STATS = [
   { value: '1,500+', label: 'legislators contacted' },
   { value: '75+', label: 'AI bills tracked' },
-  { value: '10+', label: 'meetings' },
+  { value: '10', label: 'legislative offices' },
 ];
 
 export const BILLS = [
@@ -232,7 +233,7 @@ export const BILLS = [
 
 export const FOUNDED = [
   { name: 'RL Game Club', detail: 'Founder · RL through game-bot competitions' },
-  { name: 'Tech Spark 501(c)(3)', detail: 'Co-founder · 70+ K-8 students taught' },
+  { name: 'Tech Spark 501(c)(3)', detail: 'Co-founder · 5 summers of K-8 robotics and coding' },
   { name: 'FTC robotics team', detail: 'Co-founder & student mentor' },
   { name: 'FRC 9584', detail: 'Software lead · 27th in FRC Championship Division' },
 ];

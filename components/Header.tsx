@@ -28,7 +28,7 @@ const Header: React.FC = () => {
         </nav>
         <div className="header-actions">
           <a href={PROFILE.resume} className="btn btn-dark btn-sm" target="_blank" rel="noopener">
-            Résumé <ArrowDown />
+            Resume <ArrowDown />
           </a>
           <button
             type="button"
