@@ -9,6 +9,7 @@ export const PROFILE = {
   linkedin: 'https://www.linkedin.com/in/yashmaheshwari2009/',
   instagram: 'https://www.instagram.com/yashhhh__m/',
   resume: '/resume/Yash_Maheshwari_Resume.pdf',
+  publications: 'https://research.yash-maheshwari.com/',
   photo: '/images/yashmaheshwari.png',
 };
 
@@ -48,36 +49,36 @@ export const FEATURED_RESEARCH: Paper[] = [
       { text: 'Accepted · EMNLP 2026 BabyLM Workshop', tone: 'indigo' },
       { text: 'First author', tone: 'plain' },
     ],
-    title: 'BiRWKV-7: a 28M-parameter model that learns grammar like a child',
+    title: 'Halved CLM exposure: keeping small recurrent models from losing grammar late in training',
     facts: [
-      { term: 'Question', detail: 'How much grammar can a model learn from ~10M words?' },
-      { term: 'Model', detail: 'Subquadratic RNN, O(T), trained locally on a MacBook in MLX' },
-      { term: 'Result', detail: 'Matches a 124M transformer with 23% of the parameters', strong: true },
-      { term: 'Bonus', detail: '16× recurrent-state compression' },
+      { term: 'Question', detail: 'Why do small recurrent language models get worse at grammar late in training?' },
+      { term: 'Model', detail: 'RWKV-7, a 27.4M-parameter O(T) recurrent model, trained locally on a MacBook in MLX' },
+      { term: 'Result', detail: 'Halving how often the model is updated curbs a 2.6 to 3.9 point late drop in grammar score', strong: true },
+      { term: 'Benchmark', detail: 'Beats the official GPT-2 baseline on BLiMP with about 28% of its parameters' },
     ],
     chart: {
-      caption: 'Grammar score (BLiMP) vs. model size',
+      caption: 'Grammar score (BLiMP), official BabyLM 2026 pipeline',
       bars: [
-        { label: 'BiRWKV-7 · 28M', value: '69.5%', width: 22.6, tone: 'accent' },
-        { label: 'BabyLlama · 124M', value: '69.8%', width: 100, tone: 'muted' },
+        { label: 'Our model · 27.4M', value: '68.70%', width: 27.8, tone: 'accent' },
+        { label: 'GPT-2 baseline · 98.4M', value: '65.23%', width: 100, tone: 'muted' },
       ],
       note: 'Bar length = parameter count',
     },
   },
   {
     badges: [
-      { text: 'Under review · NeurIPS 2026 Workshops', tone: 'teal' },
-      { text: '2 papers submitted', tone: 'plain' },
+      { text: 'Accepted · NeurIPS 2026 ODI Workshop (poster)', tone: 'teal' },
+      { text: 'AXIOM paper under review', tone: 'plain' },
     ],
     title: 'Below one bit: how you train a tiny model matters more than its size',
     papers: [
       {
-        venue: 'AXIOM · Training Into the Container: The Projection Gap',
+        venue: 'AXIOM (under review) · Training Into the Container: The Projection Gap',
         lead: 'Compressing a trained model below 1 bit per weight breaks it.',
         strong: 'Retraining just 8% of it recovers 97%.',
       },
       {
-        venue: 'ODI · Training Route and Budget Shape Robustness',
+        venue: 'ODI (accepted) · Training Route and Budget Shape Robustness',
         lead: 'Natively trained sub-1-bit models handle noisy input better,',
         strong: 'on every seed and scale tested.',
       },
@@ -104,7 +105,7 @@ export const MORE_RESEARCH = [
     status: 'Accepted',
     title: 'Small models as math tutors',
     detail: 'fine-tuned 8B Llama hits 93.7% step accuracy',
-    meta: 'JEI · first author',
+    meta: 'JEI · first author · in press',
   },
   {
     status: 'Patent · filed',

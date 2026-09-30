@@ -13,6 +13,7 @@ const Footer: React.FC = () => (
           <span className="footer-email">{PROFILE.email}</span>
         </div>
         <div className="footer-links">
+          <a href={PROFILE.publications} className="btn btn-ghost" rel="me">Publications</a>
           <a href={PROFILE.github} className="btn btn-ghost" target="_blank" rel="noopener">GitHub</a>
           <a href={PROFILE.linkedin} className="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
           <a href={PROFILE.resume} className="btn btn-dark" target="_blank" rel="noopener">Resume</a>

@@ -6,6 +6,9 @@
     <title>Yash Maheshwari · ML Researcher (Efficient Language Models, Healthcare AI, AI Policy)</title>
     <meta name="description" content="Yash Maheshwari is an ML researcher building efficient small language models (EMNLP 2026 BabyLM Workshop), healthcare AI agent benchmarks at Stanford's Shah Lab, and student-led AI policy featured in The Washington Post." />
     <meta name="author" content="Yash Maheshwari" />
+    <link rel="me" href="https://research.yash-maheshwari.com/" />
+    <link rel="me" href="https://github.com/yashmahe2020" />
+    <link rel="me" href="https://www.linkedin.com/in/yashmaheshwari2009/" />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="theme-color" content="#f8fafc" />
     <link rel="canonical" href="https://www.yash-maheshwari.com/" />
@@ -89,30 +92,75 @@
               "Judges' Choice Award, FTC South Bay League 2024-25"
             ],
             "sameAs": [
+              "https://research.yash-maheshwari.com/",
               "https://github.com/yashmahe2020",
               "https://www.linkedin.com/in/yashmaheshwari2009/"
             ]
           },
           {
             "@type": "ScholarlyArticle",
-            "headline": "BiRWKV-7: Data-Efficient Recurrent Language Modeling Under BabyLM 2026 Strict-Small Constraints",
-            "author": { "@id": "https://www.yash-maheshwari.com/#person" },
-            "creativeWorkStatus": "Accepted to the BabyLM Workshop at EMNLP 2026",
-            "abstract": "A ~28M-parameter recurrent (O(T)) language model trained on the BabyLM Strict-Small corpus that reaches 69.5% BLiMP accuracy, comparable to a 124M-parameter transformer baseline, trained on Apple Silicon with MLX."
+            "@id": "https://research.yash-maheshwari.com/papers/babylm-2026#article",
+            "url": "https://research.yash-maheshwari.com/papers/babylm-2026",
+            "headline": "Halved CLM Exposure Mitigates Late-Training Degradation in Small Recurrent Language Models",
+            "author": {
+              "@id": "https://www.yash-maheshwari.com/#person"
+            },
+            "datePublished": "2026",
+            "creativeWorkStatus": "Accepted",
+            "isPartOf": {
+              "@type": "Event",
+              "name": "BabyLM Workshop at EMNLP 2026"
+            },
+            "sameAs": "https://openreview.net/forum?id=Dt0kB5nTNu",
+            "abstract": "Halving how often causal language modeling updates the weights mitigates late-training BLiMP degradation in small RWKV-7 recurrent language models trained on BabyLM Strict-Small. On the official BabyLM 2026 pipeline the submission scores 68.70% BLiMP, above the GPT-2 baseline (65.23%, 98.4M parameters) at about 28% as many parameters."
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://research.yash-maheshwari.com/papers/odi-2026#article",
+            "url": "https://research.yash-maheshwari.com/papers/odi-2026",
+            "headline": "Below One Bit: Training Route and Budget Shape Robustness Under On-Device Storage Constraints",
+            "author": {
+              "@id": "https://www.yash-maheshwari.com/#person"
+            },
+            "datePublished": "2026",
+            "creativeWorkStatus": "Accepted (poster)",
+            "isPartOf": {
+              "@type": "Event",
+              "name": "NeurIPS 2026 Workshop on On-Device Intelligence: Foundation Models under Real-World Constraints (ODI)"
+            },
+            "sameAs": "https://openreview.net/forum?id=uGyEuoSW6N",
+            "abstract": "Under a fixed in-format token budget, how a sub-1-bit model was trained into its format changes how much it degrades on corrupted input, especially on code, but the contrast is strongly budget-dependent, so bit width alone does not describe a compressed on-device model."
+          },
+          {
+            "@type": "ScholarlyArticle",
+            "@id": "https://research.yash-maheshwari.com/papers/jei-2026#article",
+            "url": "https://research.yash-maheshwari.com/papers/jei-2026",
+            "headline": "Training and comparison of fine-tuned small language models as math tutoring assistants",
+            "author": [
+              {
+                "@id": "https://www.yash-maheshwari.com/#person"
+              },
+              {
+                "@type": "Person",
+                "name": "Rinky Gupta"
+              }
+            ],
+            "datePublished": "2026",
+            "creativeWorkStatus": "In press",
+            "isPartOf": {
+              "@type": "Periodical",
+              "name": "Journal of Emerging Investigators"
+            },
+            "abstract": "Compares fine-tuned Llama 3.2 math tutors at 1B, 3B and 8B parameters trained for 1, 3 or 5 epochs; parameter count mattered more than training epochs, and the 8B model at 5 epochs reached 93.65% step accuracy."
           },
           {
             "@type": "ScholarlyArticle",
             "headline": "Training Into the Container: The Projection Gap Below One Bit per Block-Linear Weight",
-            "author": { "@id": "https://www.yash-maheshwari.com/#person" },
+            "author": {
+              "@id": "https://www.yash-maheshwari.com/#person"
+            },
             "creativeWorkStatus": "Submitted to the NeurIPS 2026 AXIOM Workshop",
             "abstract": "Compares native quantization-aware training with container-matched post-training quantization below one bit per weight; adapting only the full-precision interface recovers 97% of the projection gap."
-          },
-          {
-            "@type": "ScholarlyArticle",
-            "headline": "Below One Bit: Training Route and Budget Shape Robustness Under On-Device Storage Constraints",
-            "author": { "@id": "https://www.yash-maheshwari.com/#person" },
-            "creativeWorkStatus": "Submitted to the NeurIPS 2026 ODI Workshop",
-            "abstract": "Shows that how a sub-1-bit language model is trained, not only its bit width, determines robustness to corrupted input."
           }
         ]
       }

@@ -168,6 +168,7 @@ ul, ol { padding: 0; list-style: none; }
 .chart-note { font-size: 13px; color: var(--faint); }
 
 .ledger { border-top: 1px solid var(--line-strong); }
+.research-more { margin-top: 1.5rem; }
 .ledger li { display: grid; grid-template-columns: 220px minmax(0, 1fr) 240px; gap: 32px; padding: 24px 0; border-bottom: 1px solid var(--line); align-items: baseline; font-size: 17px; }
 .ledger strong { font-weight: 600; }
 .ledger-meta { text-align: right; }

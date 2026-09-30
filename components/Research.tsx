@@ -1,5 +1,5 @@
 import React from 'react';
-import { FEATURED_RESEARCH, MORE_RESEARCH, Paper } from '../content';
+import { FEATURED_RESEARCH, MORE_RESEARCH, PROFILE, Paper } from '../content';
 import SectionHead from './SectionHead';
 
 const Feature: React.FC<{ paper: Paper }> = ({ paper }) => (
@@ -70,6 +70,11 @@ const Research: React.FC = () => (
         </li>
       ))}
     </ul>
+    <p className="research-more">
+      <a href={PROFILE.publications} className="btn btn-ghost" rel="me">
+        All accepted publications, with abstracts and PDFs →
+      </a>
+    </p>
   </section>
 );
 
