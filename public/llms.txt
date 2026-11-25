@@ -1,6 +1,6 @@
 # Yash Maheshwari
 
-> ML researcher (high school, Mountain View, California, Class of 2027) working on efficient small language models, healthcare AI agent benchmarks, and student-led AI policy. Research intern at Stanford's Shah Lab (Stanford Medicine) and Lemons Lab (Stanford Graduate School of Education).
+> ML researcher (high school, Mountain View, California, Class of 2027) working on efficient small language models, healthcare AI agent benchmarks, and student-led AI policy. Research intern at Stanford's Shah Lab (Stanford Medicine); previously at the Lemons Lab (Stanford Graduate School of Education).
 
 ## Research
 - **Halved CLM Exposure Mitigates Late-Training Degradation in Small Recurrent Language Models** (published, Proceedings of the Second BabyLM Workshop at EMNLP 2026, ACL, pp. 1-14; sole author; DOI 10.18653/2026.babylm-main.1; https://aclanthology.org/2026.babylm-main.1/): halving how often causal language modeling updates the weights mitigates late-training BLiMP degradation in small RWKV-7 (27.4M-parameter) recurrent models trained locally with MLX. Official BabyLM 2026 pipeline: 68.70% BLiMP, above the GPT-2 baseline (65.23%, 98.4M parameters) at about 28% as many parameters. Page: https://research.yash-maheshwari.com/papers/babylm-2026
@@ -12,7 +12,7 @@
 
 ## Experience
 - Research Intern, Shah Lab, Stanford Medicine (Prof. Nigam Shah), Aug 2026-present; AI Research Contractor, Kinetic Systems, Jul-Aug 2026.
-- Research Intern, Lemons Lab, Stanford GSE (Prof. Chris Lemons), Jun 2025-present: Kai AI reading tutor (1,200+ students, 50+ teachers, 10+ districts); PAWS handwriting iPad app.
+- Research Intern, Lemons Lab, Stanford GSE (Prof. Chris Lemons), Jun 2025-2026: Kai AI reading tutor (1,200+ students, 50+ teachers, 10+ districts); PAWS handwriting iPad app.
 - AI Engineering Intern, Aisera, Jun-Aug 2025: MCP servers for Salesforce, Clari and Slack; MCP bridge for HTTP and SSE.
 - Executive Board Member, MVHS Principal's Tech Internship, Sep 2024-present.
 

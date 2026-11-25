@@ -102,7 +102,7 @@ export const MORE_RESEARCH = [
   {
     status: 'Accepted',
     title: 'Small models as math tutors',
-    detail: 'the best model got 93.7% of solution steps right',
+    detail: 'the best model got the first step right 93.7% of the time',
     meta: 'JEI · first author · in press',
   },
   {
@@ -144,7 +144,7 @@ export const EXPERIENCE = [
     metricLabel: 'AI lab clients',
   },
   {
-    period: 'Jun 2025 — Present',
+    period: 'Jun 2025 — 2026',
     org: 'Stanford Graduate School of Education, Lemons Lab',
     role: 'Research Intern: Kai & PAWS',
     bullets: [
