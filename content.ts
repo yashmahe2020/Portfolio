@@ -10,7 +10,7 @@ export const PROFILE = {
   instagram: 'https://www.instagram.com/yashhhh__m/',
   resume: '/resume/Yash_Maheshwari_Resume.pdf',
   publications: 'https://research.yash-maheshwari.com/',
-  photo: '/images/yashmaheshwari.png',
+  photo: '/images/yash-maheshwari.jpg',
 };
 
 export const NAV = [
@@ -22,9 +22,9 @@ export const NAV = [
 ];
 
 export const HIGHLIGHTS = [
-  { value: 'EMNLP ’26', label: 'First-author paper, accepted to the BabyLM Workshop' },
-  { value: '2 Stanford labs', label: 'Shah Lab (Medicine) and Lemons Lab (Education)' },
-  { value: '2 patents', label: 'AI agent infrastructure filings, 2025' },
+  { value: 'EMNLP ’26', label: 'Sole-author paper, published in the ACL Anthology (BabyLM Workshop)' },
+  { value: 'NeurIPS ’26', label: 'Sole-author poster, On-Device Intelligence Workshop' },
+  { value: '12th / 530', label: 'Teams in the Trace the Ace $50K Challenge, competing solo' },
   { value: '9,000+', label: 'Expected audience for my FETC 2027 keynote', accent: true },
 ];
 
@@ -38,23 +38,27 @@ export interface Bar {
 export interface Paper {
   badges: { text: string; tone: 'indigo' | 'teal' | 'plain' }[];
   title: string;
-  facts?: { term: string; detail: string; strong?: boolean }[];
-  papers?: { venue: string; lead: string; strong: string }[];
+  facts: { term: string; detail: string; strong?: boolean }[];
+  links: { label: string; href: string }[];
   chart: { caption: string; bars: Bar[]; note: string };
 }
 
 export const FEATURED_RESEARCH: Paper[] = [
   {
     badges: [
-      { text: 'Accepted · EMNLP 2026 BabyLM Workshop', tone: 'indigo' },
-      { text: 'First author', tone: 'plain' },
+      { text: 'Published · BabyLM Workshop, EMNLP 2026', tone: 'indigo' },
+      { text: 'Sole author', tone: 'plain' },
     ],
-    title: 'Halved CLM exposure: keeping small recurrent models from losing grammar late in training',
+    title: 'Halved CLM Exposure Mitigates Late-Training Degradation in Small Recurrent Language Models',
     facts: [
       { term: 'Question', detail: 'Why do small recurrent language models get worse at grammar late in training?' },
       { term: 'Model', detail: 'RWKV-7, a 27.4M-parameter O(T) recurrent model, trained locally on a MacBook in MLX' },
       { term: 'Result', detail: 'Halving how often the model is updated curbs a 2.6 to 3.9 point late drop in grammar score', strong: true },
       { term: 'Benchmark', detail: 'Beats the official GPT-2 baseline on BLiMP with about 28% of its parameters' },
+    ],
+    links: [
+      { label: 'ACL Anthology', href: 'https://aclanthology.org/2026.babylm-main.1/' },
+      { label: 'PDF', href: 'https://aclanthology.org/2026.babylm-main.1.pdf' },
     ],
     chart: {
       caption: 'Grammar score (BLiMP), official BabyLM 2026 pipeline',
@@ -67,29 +71,27 @@ export const FEATURED_RESEARCH: Paper[] = [
   },
   {
     badges: [
-      { text: 'Accepted · NeurIPS 2026 ODI Workshop (poster)', tone: 'teal' },
-      { text: 'AXIOM paper under review', tone: 'plain' },
+      { text: 'Accepted · NeurIPS 2026 ODI Workshop · Poster', tone: 'teal' },
+      { text: 'Sole author', tone: 'plain' },
     ],
-    title: 'Below one bit: how you train a tiny model matters more than its size',
-    papers: [
-      {
-        venue: 'AXIOM (under review) · Training Into the Container: The Projection Gap',
-        lead: 'Compressing a trained model below 1 bit per weight breaks it.',
-        strong: 'Retraining just 8% of it recovers 97%.',
-      },
-      {
-        venue: 'ODI (accepted) · Training Route and Budget Shape Robustness',
-        lead: 'Natively trained sub-1-bit models handle noisy input better,',
-        strong: 'on every seed and scale tested.',
-      },
+    title: 'Below One Bit: Training Route and Budget Shape Robustness Under On-Device Storage Constraints',
+    facts: [
+      { term: 'Question', detail: 'Does the way a model reaches sub-1-bit weights change how it handles corrupted input?' },
+      { term: 'Models', detail: 'Byte-level models trained from scratch, 0.86M to 10.03M parameters, six seeds each' },
+      { term: 'Result', detail: 'With equal tokens trained in the format, native models degrade less on corrupted Python code in every setting and seed', strong: true },
+      { term: 'Budget', detail: 'The token budget sets the size and sign of the gap: 4× more native tokens reverses it at the two smallest sizes' },
+    ],
+    links: [
+      { label: 'OpenReview', href: 'https://openreview.net/forum?id=uGyEuoSW6N' },
+      { label: 'NeurIPS poster', href: 'https://neurips.cc/virtual/2026/170010' },
     ],
     chart: {
-      caption: 'Prediction error at 0.41 bits/weight · lower is better',
+      caption: 'Model size on disk, 10.03M parameters',
       bars: [
-        { label: 'Trained natively', value: '~3.1 bpb', width: 48, tone: 'teal' },
-        { label: 'Compressed after training', value: '5.8–6.4 bpb', width: 100, tone: 'muted' },
+        { label: '16-bit weights (fp16)', value: 'baseline', width: 100, tone: 'muted' },
+        { label: 'Packed sub-1-bit', value: '22.9× smaller', width: 4.4, tone: 'teal' },
       ],
-      note: 'Past 5.06 bpb, a model is worse than guessing letter frequencies',
+      note: '8.8× smaller at 0.86M; the saving grows with scale',
     },
   },
 ];
@@ -188,10 +190,24 @@ export const QUOTE = {
   source: 'From my Common Sense Media 2026 talk',
 };
 
-export const PRESS = ['The Washington Post', 'Los Altos Town Crier', 'Center for Digital Education', 'Amplify', 'Thinkering Collective'];
+export const PRESS: { name: string; href?: string }[] = [
+  { name: 'The Washington Post', href: 'https://www.washingtonpost.com/technology/2025/10/05/school-ai-homework-teens/' },
+  { name: 'Verde Magazine', href: 'https://verdemagazine.com/discussing-a-new-direction' },
+  { name: 'Center for Digital Education', href: 'https://www.govtech.com/education/k-12/fetc26-student-internships-that-build-leaders-not-just-resumes' },
+  { name: 'Exceptional Educators Podcast', href: 'https://exceptionaleducatorspodcast.transistor.fm/episodes/preparing-for-tomorrow-mountain-view-high-school-students-on-ai-literacy-educations-biggest-challenges' },
+  { name: 'Los Altos Town Crier' },
+  { name: 'Amplify' },
+  { name: 'Thinkering Collective' },
+];
+
+export const KEYNOTE = {
+  href: 'https://www.fetc.org/speakers/yash-maheshwari',
+  image: '/images/fetc-2027-keynote.jpg',
+  alt: 'FETC 2027 keynote speaker graphic: Yash Maheshwari, Power Player, The Next Generation Is Already in the Game, January 26-29, 2027, Orlando',
+};
 
 export const TALKS = [
-  { date: 'Jan 2027', title: 'FETC · Keynote', detail: 'One of the largest ed-tech conferences in the US', aside: '9,000+', featured: true },
+  { date: 'Jan 2027', title: 'FETC · Keynote', detail: '“Power Players: The Next Generation Is Already in the Game” · Orlando', aside: '9,000+', featured: true, href: 'https://www.fetc.org/speakers/yash-maheshwari' },
   { date: '2026', title: 'Common Sense Media Summit · Two keynote panels', detail: 'Opened and closed day one · met Secretary Hillary Clinton', aside: '600+', big: true },
   { date: '2026', title: 'FETC · Two sessions', detail: 'AI ethics through play · student-led tech internships', aside: 'Orlando' },
   { date: '2025', title: 'ASU+GSV Summit · “Learners Light the Way”', detail: 'AI Show demo · 1 of 3 high schoolers at Walton breakfast', aside: 'San Diego' },
@@ -199,7 +215,7 @@ export const TALKS = [
 ];
 
 export const MORE_TALKS =
-  'Foothill College KCI · CAL-MSCS statewide educator day (80+ teachers) · AI & Education Parent Night (60+) · AI Playlab (100+) · Stanford Down Syndrome Conference';
+  'National AI Literacy Day Summit 2026 · Foothill College KCI · CAL-MSCS statewide educator day (80+ teachers) · AI & Education Parent Night (60+) · AI Playlab (100+) · Stanford Down Syndrome Conference';
 
 export const WAPO = {
   href: 'https://www.washingtonpost.com/technology/2025/10/05/school-ai-homework-teens/',
@@ -240,6 +256,7 @@ export const FOUNDED = [
 ];
 
 export const AWARDS = [
+  { name: 'Trace the Ace $50K Challenge, 12th of 530 teams (solo)', year: '2026' },
   { name: 'MVHacks, 1st place overall', year: '2025' },
   { name: 'Aisera AI Hackathon, 2nd of 30 teams', year: '2025' },
   { name: 'Highest Rookie Team Award, FRC Worlds', year: '2024' },

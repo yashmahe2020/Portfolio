@@ -32,7 +32,7 @@ const Hero: React.FC = () => (
         </div>
       </div>
       <div className="hero-photo">
-        <img src={PROFILE.photo} alt="Portrait of Yash Maheshwari" width={420} height={520} />
+        <img src={PROFILE.photo} alt="Portrait of Yash Maheshwari" width={420} height={560} />
         <div className="now-card">
           <span className="eyebrow">Now</span>
           <span className="now-text">{PROFILE.now}</span>

@@ -26,6 +26,6 @@ jobs:
       - run: pnpm build
       - name: Check prerendered HTML
         run: |
-          grep -q 'BiRWKV-7' dist/index.html
+          grep -q 'Halved CLM Exposure' dist/index.html
           grep -q 'application/ld+json' dist/index.html
           test -f dist/robots.txt && test -f dist/sitemap.xml && test -f dist/llms.txt

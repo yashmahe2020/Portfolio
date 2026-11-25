@@ -36,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="/images/yashmaheshwari.png" />
+    <link rel="preload" as="image" href="/images/yash-maheshwari.jpg" />
 
     <script type="application/ld+json">
       {
@@ -63,7 +63,7 @@
             "@id": "https://www.yash-maheshwari.com/#person",
             "name": "Yash Maheshwari",
             "url": "https://www.yash-maheshwari.com/",
-            "image": "https://www.yash-maheshwari.com/images/yashmaheshwari.png",
+            "image": "https://www.yash-maheshwari.com/images/yash-maheshwari.jpg",
             "email": "mailto:yashmahe2018@gmail.com",
             "jobTitle": "ML Researcher",
             "description": "ML researcher working on efficient small language models, healthcare AI agent benchmarks, and student-led AI policy.",
@@ -85,6 +85,7 @@
               "AI policy in education"
             ],
             "award": [
+              "12th of 530 teams, Trace the Ace $50K Challenge 2026",
               "1st Place, MVHacks 2025",
               "2nd Place, Aisera AI Hackathon 2025",
               "Highest Rookie Team Award, FRC World Championship 2024",
@@ -105,13 +106,16 @@
             "author": {
               "@id": "https://www.yash-maheshwari.com/#person"
             },
-            "datePublished": "2026",
-            "creativeWorkStatus": "Accepted",
+            "datePublished": "2026-10",
+            "creativeWorkStatus": "Published",
+            "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.18653/2026.babylm-main.1" },
             "isPartOf": {
-              "@type": "Event",
-              "name": "BabyLM Workshop at EMNLP 2026"
+              "@type": "Book",
+              "name": "Proceedings of the Second BabyLM Workshop",
+              "publisher": { "@type": "Organization", "name": "Association for Computational Linguistics" }
             },
-            "sameAs": "https://openreview.net/forum?id=Dt0kB5nTNu",
+            "pagination": "1-14",
+            "sameAs": ["https://aclanthology.org/2026.babylm-main.1/", "https://doi.org/10.18653/2026.babylm-main.1", "https://openreview.net/forum?id=Dt0kB5nTNu"],
             "abstract": "Halving how often causal language modeling updates the weights mitigates late-training BLiMP degradation in small RWKV-7 recurrent language models trained on BabyLM Strict-Small. On the official BabyLM 2026 pipeline the submission scores 68.70% BLiMP, above the GPT-2 baseline (65.23%, 98.4M parameters) at about 28% as many parameters."
           },
           {
@@ -128,8 +132,8 @@
               "@type": "Event",
               "name": "NeurIPS 2026 Workshop on On-Device Intelligence: Foundation Models under Real-World Constraints (ODI)"
             },
-            "sameAs": "https://openreview.net/forum?id=uGyEuoSW6N",
-            "abstract": "Under a fixed in-format token budget, how a sub-1-bit model was trained into its format changes how much it degrades on corrupted input, especially on code, but the contrast is strongly budget-dependent, so bit width alone does not describe a compressed on-device model."
+            "sameAs": ["https://openreview.net/forum?id=uGyEuoSW6N", "https://neurips.cc/virtual/2026/170010"],
+            "abstract": "With the same number of tokens trained in a sub-1-bit format, natively trained models degrade less on corrupted code than models quantized after training and then fine-tuned, but they remain worse in absolute terms; the token budget sets the size and sign of the gap."
           },
           {
             "@type": "ScholarlyArticle",
@@ -152,15 +156,6 @@
               "name": "Journal of Emerging Investigators"
             },
             "abstract": "Compares fine-tuned Llama math tutors at 1B, 3B and 8B parameters trained for 1, 3 or 5 epochs; parameter count mattered more than training epochs, and the 8B model at 5 epochs reached 93.65% step accuracy."
-          },
-          {
-            "@type": "ScholarlyArticle",
-            "headline": "Training Into the Container: The Projection Gap Below One Bit per Block-Linear Weight",
-            "author": {
-              "@id": "https://www.yash-maheshwari.com/#person"
-            },
-            "creativeWorkStatus": "Submitted to the NeurIPS 2026 AXIOM Workshop",
-            "abstract": "Compares native quantization-aware training with container-matched post-training quantization below one bit per weight; adapting only the full-precision interface recovers 97% of the projection gap."
           }
         ]
       }

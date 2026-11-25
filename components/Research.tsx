@@ -11,28 +11,21 @@ const Feature: React.FC<{ paper: Paper }> = ({ paper }) => (
         ))}
       </div>
       <h3>{paper.title}</h3>
-      {paper.facts && (
-        <dl className="facts">
-          {paper.facts.map((f) => (
-            <React.Fragment key={f.term}>
-              <dt>{f.term}</dt>
-              <dd className={f.strong ? 'strong' : ''}>{f.detail}</dd>
-            </React.Fragment>
-          ))}
-        </dl>
-      )}
-      {paper.papers && (
-        <ul className="paper-list">
-          {paper.papers.map((p) => (
-            <li key={p.venue}>
-              <span className="mono small muted">{p.venue}</span>
-              <span>
-                {p.lead} <strong>{p.strong}</strong>
-              </span>
-            </li>
-          ))}
-        </ul>
-      )}
+      <dl className="facts">
+        {paper.facts.map((f) => (
+          <React.Fragment key={f.term}>
+            <dt>{f.term}</dt>
+            <dd className={f.strong ? 'strong' : ''}>{f.detail}</dd>
+          </React.Fragment>
+        ))}
+      </dl>
+      <p className="paper-links">
+        {paper.links.map((l) => (
+          <a key={l.href} href={l.href} className="chip" target="_blank" rel="noopener">
+            {l.label} <span aria-hidden="true">↗</span>
+          </a>
+        ))}
+      </p>
     </div>
     <figure className="chart">
       <figcaption className="eyebrow">{paper.chart.caption}</figcaption>
