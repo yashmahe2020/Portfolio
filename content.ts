@@ -51,22 +51,20 @@ export const FEATURED_RESEARCH: Paper[] = [
     ],
     title: 'Halved CLM Exposure Mitigates Late-Training Degradation in Small Recurrent Language Models',
     facts: [
-      { term: 'Question', detail: 'Why do small recurrent language models get worse at grammar late in training?' },
-      { term: 'Model', detail: 'RWKV-7, a 27.4M-parameter O(T) recurrent model, trained locally on a MacBook in MLX' },
-      { term: 'Result', detail: 'Halving how often the model is updated curbs a 2.6 to 3.9 point late drop in grammar score', strong: true },
-      { term: 'Benchmark', detail: 'Beats the official GPT-2 baseline on BLiMP with about 28% of its parameters' },
+      { term: 'Question', detail: 'Why do small language models get worse at grammar late in training?' },
+      { term: 'Finding', detail: 'Updating the model half as often curbs that decline. Trained on a MacBook, it beats the official GPT-2 baseline at under a third of the size.', strong: true },
     ],
     links: [
+      { label: 'Summary & figures', href: 'https://research.yash-maheshwari.com/papers/babylm-2026' },
       { label: 'ACL Anthology', href: 'https://aclanthology.org/2026.babylm-main.1/' },
-      { label: 'PDF', href: 'https://aclanthology.org/2026.babylm-main.1.pdf' },
     ],
     chart: {
-      caption: 'Grammar score (BLiMP), official BabyLM 2026 pipeline',
+      caption: 'Grammar test score (BLiMP), official BabyLM 2026 evaluation',
       bars: [
-        { label: 'Our model · 27.4M', value: '68.70%', width: 27.8, tone: 'accent' },
-        { label: 'GPT-2 baseline · 98.4M', value: '65.23%', width: 100, tone: 'muted' },
+        { label: 'My model · 27.4M parameters', value: '68.70%', width: 27.8, tone: 'accent' },
+        { label: 'GPT-2 baseline · 98.4M parameters', value: '65.23%', width: 100, tone: 'muted' },
       ],
-      note: 'Bar length = parameter count',
+      note: 'Bar length shows model size',
     },
   },
   {
@@ -76,22 +74,20 @@ export const FEATURED_RESEARCH: Paper[] = [
     ],
     title: 'Below One Bit: Training Route and Budget Shape Robustness Under On-Device Storage Constraints',
     facts: [
-      { term: 'Question', detail: 'Does the way a model reaches sub-1-bit weights change how it handles corrupted input?' },
-      { term: 'Models', detail: 'Byte-level models trained from scratch, 0.86M to 10.03M parameters, six seeds each' },
-      { term: 'Result', detail: 'With equal tokens trained in the format, native models degrade less on corrupted Python code in every setting and seed', strong: true },
-      { term: 'Budget', detail: 'The token budget sets the size and sign of the gap: 4× more native tokens reverses it at the two smallest sizes' },
+      { term: 'Question', detail: 'To fit on a phone, a model can store each weight in under one bit. Does it matter whether it learns that way from the start or is compressed afterward?' },
+      { term: 'Finding', detail: 'Given the same training, models that learn this way from the start hold up better on corrupted code, though they score lower overall.', strong: true },
     ],
     links: [
+      { label: 'Summary & figures', href: 'https://research.yash-maheshwari.com/papers/odi-2026' },
       { label: 'OpenReview', href: 'https://openreview.net/forum?id=uGyEuoSW6N' },
-      { label: 'NeurIPS poster', href: 'https://neurips.cc/virtual/2026/170010' },
     ],
     chart: {
       caption: 'Model size on disk, 10.03M parameters',
       bars: [
-        { label: '16-bit weights (fp16)', value: 'baseline', width: 100, tone: 'muted' },
-        { label: 'Packed sub-1-bit', value: '22.9× smaller', width: 4.4, tone: 'teal' },
+        { label: 'Standard 16-bit model', value: 'baseline', width: 100, tone: 'muted' },
+        { label: 'Sub-1-bit model', value: '22.9× smaller', width: 4.4, tone: 'teal' },
       ],
-      note: '8.8× smaller at 0.86M; the saving grows with scale',
+      note: 'The saving grows with model size (8.8× at 0.86M parameters)',
     },
   },
 ];
@@ -100,13 +96,13 @@ export const MORE_RESEARCH = [
   {
     status: 'In development',
     title: 'HealthAdminBench V2',
-    detail: 'hospital-admin tasks frontier agents still fail, on a realistic Epic EHR',
+    detail: 'hospital admin tasks the best AI agents still fail, in a realistic copy of Epic',
     meta: 'Stanford Medicine × Kinetic',
   },
   {
     status: 'Accepted',
     title: 'Small models as math tutors',
-    detail: 'fine-tuned 8B Llama hits 93.7% step accuracy',
+    detail: 'the best model got 93.7% of solution steps right',
     meta: 'JEI · first author · in press',
   },
   {
@@ -130,7 +126,7 @@ export const EXPERIENCE = [
     role: 'Research Intern, Healthcare AI',
     bullets: [
       'Maintaining HealthAdminBench; A/B testing models with AI lab engineers',
-      'Building HealthAdminBench V2 on Harbor + a realistic Epic EHR',
+      'Building HealthAdminBench V2 on a realistic copy of Epic, the hospital records system',
       'Tracing where each model gets stuck · with Dr. Nigam Shah',
     ],
     metric: 'Epic',
@@ -153,7 +149,7 @@ export const EXPERIENCE = [
     role: 'Research Intern: Kai & PAWS',
     bullets: [
       'Kai: AI reading tutor in 10+ districts, 50+ teachers',
-      'Built the AIOps eval suite for Kai · cut latency 75%, then a non-LLM path answering in <50 ms',
+      'Built Kai’s testing suite · cut response time 75%, then added a non-AI path that answers in under 50 ms',
       'PAWS: kindergarten handwriting tutor, web prototype → native iPad app',
     ],
     metric: '1,200+',
@@ -240,7 +236,8 @@ export const BILLS = [
   { state: 'FL', bill: 'SB 482', topic: 'AI Bill of Rights' },
   { state: 'ME', bill: 'LD 2162', topic: 'Human-like features in AI' },
   { state: 'MI', bill: 'SB 760', topic: 'AI companion chatbot regulation' },
-  { state: 'PA', bill: 'SB 939 · SB 1090', topic: 'AI regulatory sandbox, AI safeguards' },
+  { state: 'PA', bill: 'SB 939', topic: 'AI regulatory sandbox' },
+  { state: 'PA', bill: 'SB 1090', topic: 'AI safeguards' },
   { state: 'CO', bill: 'HB26-1139', topic: 'AI in health care' },
   { state: 'NY', bill: 'A09253', topic: 'AI use in policing' },
   { state: 'OH', bill: 'SCR 14', topic: 'State authority over AI regulation' },
@@ -249,7 +246,6 @@ export const BILLS = [
 ];
 
 export const FOUNDED = [
-  { name: 'RL Game Club', detail: 'Founder · RL through game-bot competitions' },
   { name: 'Tech Spark 501(c)(3)', detail: 'Co-founder · 5 summers of K-8 robotics and coding' },
   { name: 'FTC robotics team', detail: 'Co-founder & student mentor' },
   { name: 'FRC 9584', detail: 'Software lead · 27th in FRC Championship Division' },
@@ -259,7 +255,6 @@ export const AWARDS = [
   { name: 'Trace the Ace $50K Challenge, 12th of 530 teams (solo)', year: '2026' },
   { name: 'MVHacks, 1st place overall', year: '2025' },
   { name: 'Aisera AI Hackathon, 2nd of 30 teams', year: '2025' },
-  { name: 'Highest Rookie Team Award, FRC Worlds', year: '2024' },
   { name: 'Congressional App Challenge, Honorable Mention', year: '2024' },
   { name: "FTC Judges' Choice Award", year: '2024–25' },
 ];

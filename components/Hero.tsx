@@ -13,7 +13,7 @@ const Hero: React.FC = () => (
         <h1>
           Yash
           <br />
-          Maheshwari<span className="accent">.</span>
+          Maheshwari
         </h1>
         <p className="hero-pitch">{PROFILE.pitch}</p>
         <div className="hero-actions">

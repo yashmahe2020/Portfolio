@@ -6,10 +6,8 @@ const Footer: React.FC = () => (
     <div className="wrap">
       <div className="footer-top">
         <div className="footer-cta">
-          <span className="kicker">Research, speaking, collaborations</span>
-          <a href={`mailto:${PROFILE.email}`} className="say-hi">
-            Say hi<span className="accent">.</span>
-          </a>
+          <span className="kicker">Research, speaking and collaborations</span>
+          <a href={`mailto:${PROFILE.email}`} className="contact-link">Contact</a>
           <span className="footer-email">{PROFILE.email}</span>
         </div>
         <div className="footer-links">

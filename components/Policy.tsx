@@ -51,7 +51,7 @@ const Policy: React.FC = () => (
           <div
             className="state-map"
             role="img"
-            aria-label={`States where I discussed AI legislation with legislative offices: ${BILLS.map((b) => b.state).join(', ')}`}
+            aria-label={`States where I discussed AI legislation with legislative offices: ${[...ACTIVE].join(', ')}`}
           >
             {TILES.map(([st, col, row]) => (
               <span
@@ -64,28 +64,19 @@ const Policy: React.FC = () => (
               </span>
             ))}
           </div>
-          <div className="table-scroll">
-            <table className="bills">
-              <caption className="eyebrow">AI bills discussed with legislative offices, 2026</caption>
-              <thead>
-                <tr>
-                  <th scope="col">State</th>
-                  <th scope="col">Bill</th>
-                  <th scope="col">Topic</th>
-                </tr>
-              </thead>
-              <tbody>
-                {BILLS.map((b) => (
-                  <tr key={b.state}>
-                    <td className="mono ink">{b.state}</td>
-                    <td className="mono">{b.bill}</td>
-                    <td>{b.topic}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
         </div>
+      </div>
+      <div className="bills">
+        <h3 className="eyebrow">AI bills discussed with legislative offices, 2026</h3>
+        <ul className="bill-grid">
+          {BILLS.map((b) => (
+            <li key={b.state + b.bill}>
+              <span className="bill-state mono">{b.state}</span>
+              <span className="mono ink">{b.bill}</span>
+              <span>{b.topic}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   </section>

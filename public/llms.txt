@@ -23,7 +23,7 @@
 
 ## Links
 - Website: https://www.yash-maheshwari.com/
-- Publications (accepted work, abstracts, PDFs): https://research.yash-maheshwari.com/
+- Publications (accepted work, abstracts, figures): https://research.yash-maheshwari.com/
 - Resume (PDF): https://www.yash-maheshwari.com/resume/Yash_Maheshwari_Resume.pdf
 - GitHub: https://github.com/yashmahe2020
 - LinkedIn: https://www.linkedin.com/in/yashmaheshwari2009/

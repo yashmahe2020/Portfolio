@@ -65,7 +65,7 @@ const Research: React.FC = () => (
     </ul>
     <p className="research-more">
       <a href={PROFILE.publications} className="btn btn-ghost" rel="me">
-        All accepted publications, with abstracts and PDFs →
+        Abstracts, figures and all publications on my research site →
       </a>
     </p>
   </section>

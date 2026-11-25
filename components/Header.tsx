@@ -17,7 +17,7 @@ const Header: React.FC = () => {
       <div className="wrap header-inner">
         <a href="#top" className="logo" aria-label="Yash Maheshwari, back to top">
           <span className="logo-mark" />
-          <span>YM<span className="accent">.</span></span>
+          <span>YM</span>
         </a>
         <nav id="primary-nav" aria-label="Primary" className={`nav ${open ? 'is-open' : ''}`}>
           {NAV.map((item) => (
