@@ -191,7 +191,7 @@ export const PRESS: { name: string; href?: string }[] = [
   { name: 'Verde Magazine', href: 'https://verdemagazine.com/discussing-a-new-direction' },
   { name: 'Center for Digital Education', href: 'https://www.govtech.com/education/k-12/fetc26-student-internships-that-build-leaders-not-just-resumes' },
   { name: 'Exceptional Educators Podcast', href: 'https://exceptionaleducatorspodcast.transistor.fm/episodes/preparing-for-tomorrow-mountain-view-high-school-students-on-ai-literacy-educations-biggest-challenges' },
-  { name: 'Los Altos Town Crier' },
+  { name: 'Los Altos Town Crier', href: 'https://www.losaltosonline.com/business/it-s-in-the-cards-local-student-creates-game-now-sold-on-amazon/article_864a14bc-4715-11ec-84ef-ab1ebd875375.html' },
   { name: 'Amplify' },
   { name: 'Thinkering Collective' },
 ];
